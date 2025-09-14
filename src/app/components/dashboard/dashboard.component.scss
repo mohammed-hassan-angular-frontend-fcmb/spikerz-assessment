@@ -59,16 +59,20 @@
     }
 
     .dashboard-content {
-      @apply flex-1 grid grid-cols-1 lg:grid-cols-3 gap-4 p-5;
+      @apply flex-1 p-5;
+      display: flex;
+      gap: 1rem;
+      height: calc(100vh - 120px); /* Adjust based on header height */
 
       /* New layout */
       .left-column {
-        @apply lg:col-span-1;
+        flex: 1;
+        overflow-y: auto;
+        max-height: 100%;
 
         .card.surface {
           @apply bg-white rounded-2xl shadow-sm border border-gray-200 p-6;
-          /* Height nearly full viewport to match the sidebar */
-          min-height: calc(100vh - 64px);
+          /* Remove fixed height to allow natural scrolling */
           display: flex;
           flex-direction: column;
 
@@ -178,7 +182,15 @@
       }
 
       .right-column {
-        @apply lg:col-span-2 flex flex-col space-y-4;
+        flex: 2;
+        position: sticky;
+        top: 0;
+        height: fit-content;
+        max-height: calc(100vh - 120px);
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
 
         .card {
           @apply bg-white rounded-2xl shadow-sm border border-gray-200;
@@ -1151,14 +1163,20 @@
       margin-left: 80px;
 
       .dashboard-content {
-        @apply grid-cols-1;
+        flex-direction: column;
+        height: auto;
 
-        .graph-panel {
-          @apply col-span-1;
+        .left-column {
+          flex: none;
+          overflow-y: visible;
+          max-height: none;
         }
 
-        .info-panel {
-          @apply col-span-1;
+        .right-column {
+          position: static;
+          flex: none;
+          max-height: none;
+          height: auto;
         }
       }
     }
@@ -1191,7 +1209,23 @@
       }
 
       .dashboard-content {
-        @apply p-4 gap-4;
+        padding: 1rem;
+        gap: 1rem;
+        flex-direction: column;
+        height: auto;
+
+        .left-column {
+          flex: none;
+          overflow-y: visible;
+          max-height: none;
+        }
+
+        .right-column {
+          position: static;
+          flex: none;
+          max-height: none;
+          height: auto;
+        }
       }
     }
   }
