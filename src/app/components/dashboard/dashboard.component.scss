@@ -122,7 +122,14 @@
 
         /* Global text-green class for this component */
         .text-green {
-          color: #16A34A !important;
+          color: #02983E !important;
+          margin-bottom: 20px;
+          font-weight: 700;
+          font-style: Bold;
+          font-size: 20px;
+          line-height: 22px;
+          letter-spacing: 1%;
+          text-transform: capitalize;
         }
 
         .graph-card {
@@ -216,8 +223,8 @@
           .status-indicator::before { content:""; width:10px; height:10px; background:#ffffff; -webkit-mask-size:contain; mask-size:contain; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat; -webkit-mask-position:center; mask-position:center; }
           .status-indicator.error::before { -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 18L18 6M6 6l12 12'/%3E%3C/svg%3E"); mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 18L18 6M6 6l12 12'/%3E%3C/svg%3E"); }
           .status-indicator.success::before { -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M5 13l4 4L19 7'/%3E%3C/svg%3E"); mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M5 13l4 4L19 7'/%3E%3C/svg%3E"); }
-          .node-label { font-size:15px; font-weight:600; color:#475569; white-space:nowrap; text-align:center; letter-spacing:-0.025em; }
-          .node-ip { font-size:13px; color:#94a3b8; font-weight:500; text-align:center; }
+          .node-label { font-size:15px; font-weight:600; color:#475569; white-space:nowrap; text-align:center; letter-spacing:-0.025em; margin-top: -10px; }
+          .node-ip { font-size:11px; color:#94a3b8; font-weight:500; text-align:center; margin-top: -15px; }
 
           /* Node positioning - matching the uploaded image layout */
           .node-1 { top:80px; left:30px; }    /* Loremipsumm (leftmost) */
@@ -636,6 +643,12 @@
 
         .node-4 .tooltip-backdrop {
             top: 1%;
+            left: 77%;
+            transform: translateX(-50%);
+          }
+
+        .node-5 .tooltip-backdrop {
+            top: 30%;
             left: 80%;
             transform: translateX(-50%);
           }
@@ -724,6 +737,76 @@
 
         /* Node 4 Tooltip Styling */
         .node-4-tooltip {
+          width: 100% !important;
+          min-width: 280px !important;
+          position: relative;
+
+          .shield-icon-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+
+            .shield-icon-inline {
+              width: 24px;
+              height: 24px;
+              flex-shrink: 0;
+            }
+
+            .node-title {
+              font-size: 1rem;
+              font-weight: 600;
+              color: #111827;
+              margin: 0;
+            }
+          }
+
+          .node-ip-header {
+            font-size: 0.875rem;
+            color: #6B7280;
+            margin-bottom: 1rem;
+          }
+
+          .tooltip-content {
+            .info-section {
+              .info-row {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+                font-size: 14px;
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+
+                .info-icon {
+                  font-size: 16px;
+                }
+
+                .info-text {
+                  color: #6B7280;
+                  font-weight: 500;
+                }
+
+                .info-value {
+                  font-weight: 600;
+
+                  &.highlight {
+                    color: #D97706;
+                  }
+
+                  &.blue {
+                    color: #2563EB;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        /* Node 5 Tooltip Styling */
+        .node-5-tooltip {
           width: 100% !important;
           min-width: 280px !important;
           position: relative;
