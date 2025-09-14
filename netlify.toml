@@ -9,11 +9,11 @@
   command = "npm run build:prod"
 
 [build.environment]
-  # Node.js version
-  NODE_VERSION = "18"
+  # Node.js version (Angular CLI requires v20.19+ or v22.12+)
+  NODE_VERSION = "20"
 
   # NPM version (optional)
-  NPM_VERSION = "9"
+  NPM_VERSION = "10"
 
 # Redirect rules for Angular SPA
 [[redirects]]

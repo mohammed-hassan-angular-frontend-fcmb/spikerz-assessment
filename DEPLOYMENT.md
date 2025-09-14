@@ -63,9 +63,9 @@ This ensures all routes are handled by Angular's router.
 ## 🔧 Configuration Details
 
 ### Build Settings
-- **Build Command:** `npm run build`
+- **Build Command:** `npm run build:prod`
 - **Publish Directory:** `dist/spikerz-dashboard/browser`
-- **Node Version:** 18
+- **Node Version:** 20+ (Angular CLI requirement)
 - **Package Manager:** npm
 
 ### Environment Variables (Optional)
