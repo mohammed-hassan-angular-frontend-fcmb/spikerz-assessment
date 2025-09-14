@@ -311,10 +311,39 @@
           .graph-canvas .legend { display:flex; align-items:center; gap:20px; padding: 8px 12px; }
 
           /* Diagram container styles (updated as requested) */
-          .diagram-container { position:relative; width:100%; max-width:1100px; margin:0 auto; background:#ffffff; padding:10px 20px; border-radius:16px; box-shadow:0 10px 25px -5px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); min-height:400px; }
+          .diagram-container {
+            position: relative;
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 10px 20px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+            min-height: 400px;
+            /* Ensure consistent sizing across environments */
+            box-sizing: border-box;
+            overflow: visible; /* Prevent clipping of absolutely positioned nodes */
+          }
           .diagram-title { font-size:28px; font-weight:700; color:#10b981; margin-bottom:60px; letter-spacing:-0.025em; }
-          .nodes-container { position:relative; height:350px; width:100%; }
-          .node { position:absolute; display:flex; flex-direction:column; align-items:center; gap:12px; z-index:10; }
+          .nodes-container {
+            position: relative;
+            height: 350px;
+            width: 100%;
+            min-width: 600px; /* Ensure minimum width for proper positioning */
+            overflow: visible; /* Prevent clipping of positioned elements */
+          }
+          .node {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            z-index: 10;
+            /* Ensure nodes don't get clipped or repositioned */
+            transform: translateZ(0); /* Force hardware acceleration */
+            will-change: transform; /* Optimize for positioning changes */
+          }
           .node-icon { position:relative; width:70px; height:70px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:#dbeafe; border:3px solid #3b82f6; box-shadow:0 4px 12px rgba(59,130,246,0.15); transition:all .2s ease; color:#3b82f6; }
           .node-icon:hover { transform: translateY(-2px); box-shadow:0 8px 20px rgba(59,130,246,0.25); }
           .node-icon.user { background:#f3e8ff; border:3px solid #8b5cf6; box-shadow:0 4px 12px rgba(139,92,246,0.15); color:#8b5cf6; }
@@ -336,8 +365,8 @@
           .node-2 { top:80px; left:200px; }   /* Loremipsu (center-left) */
           .node-3 { top:80px; left:360px; }   /* Loremipsu (center-right) */
 
-          .node-4 { top:1px; right:20px; }   /* Loremipsumdolorsit (top-right) - aligns with Y upper branch */
-          .node-5 { top:140px; right:2px; }  /* Loremipsumdolorsit002 (bottom-right) - aligns with Y lower branch */
+          .node-4 { top:10px; right:30px; }   /* Loremipsumdolorsit (top-right) - aligns with Y upper branch */
+          .node-5 { top:140px; right:20px; }  /* Loremipsumdolorsit002 (bottom-right) - aligns with Y lower branch */
 
           /* Connection lines */
           .connection { position:absolute; background:#cbd5e1; z-index:1; }
