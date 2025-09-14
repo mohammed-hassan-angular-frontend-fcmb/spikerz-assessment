@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideNoopAnimations } from '@angular/platform-browser/animations';
 
 import { GraphComponent } from './graph.component';
 
@@ -8,7 +9,8 @@ describe('GraphComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GraphComponent]
+      imports: [GraphComponent],
+      providers: [provideNoopAnimations()]
     })
     .compileComponents();
 

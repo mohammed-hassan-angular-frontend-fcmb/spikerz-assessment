@@ -20,10 +20,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('spikerz-dashboard');
   });
 
-  it('should render title', () => {
+  it('should render dashboard component', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, spikerz-dashboard');
+    expect(compiled.querySelector('app-dashboard')).toBeTruthy();
   });
 });
