@@ -184,12 +184,12 @@
           .node-ip { font-size:13px; color:#94a3b8; font-weight:500; text-align:center; }
 
           /* Node positioning - matching the uploaded image layout */
-          .node-1 { top:80px; left:40px; }    /* Loremipsumm (leftmost) */
+          .node-1 { top:80px; left:30px; }    /* Loremipsumm (leftmost) */
           .node-2 { top:80px; left:200px; }   /* Loremipsu (center-left) */
           .node-3 { top:80px; left:360px; }   /* Loremipsu (center-right) */
 
-          .node-4 { top:1px; right:25px; }   /* Loremipsumdolorsit (top-right) - aligns with Y upper branch */
-          .node-5 { top:140px; right:10px; }  /* Loremipsumdolorsit002 (bottom-right) - aligns with Y lower branch */
+          .node-4 { top:1px; right:20px; }   /* Loremipsumdolorsit (top-right) - aligns with Y upper branch */
+          .node-5 { top:140px; right:2px; }  /* Loremipsumdolorsit002 (bottom-right) - aligns with Y lower branch */
 
           /* Connection lines */
           .connection { position:absolute; background:#cbd5e1; z-index:1; }
@@ -198,8 +198,8 @@
           .connection-branch { background:#cbd5e1; border-radius:2px; }
 
           /* Straight connections between first 3 nodes */
-          .conn-1-2 { top:114px; left:110px; width:70px; }   /* Loremipsumm → Loremipsu */
-          .conn-2-3 { top:114px; left:270px; width:70px; }   /* Loremipsu → Loremipsu */
+          .conn-1-2 { top:114px; left:120px; width:60px; }   /* Loremipsumm → Loremipsu (with spacing) */
+          .conn-2-3 { top:114px; left:280px; width:60px; }   /* Loremipsu → Loremipsu (with spacing) */
 
           /* Y-shaped SVG connector from node 3 to both target nodes */
           .y-connector {
@@ -214,6 +214,7 @@
           .y-connector svg {
             width: 100%;
             height: 100%;
+            margin-left: 10px;
           }
 
           .connector-path {
@@ -236,8 +237,8 @@
           .arrow-right { border-left:10px solid #cbd5e1; border-top:5px solid transparent; border-bottom:5px solid transparent; }
           .arrow-1-2 { top:109px; left:170px; }   /* Arrow between Loremipsumm → Loremipsu */
           .arrow-2-3 { top:109px; left:330px; }   /* Arrow between Loremipsu → Loremipsu */
-          .arrow-to-4 { top:59px; right:135px; }   /* Arrow to top-right node */
-          .arrow-to-5 { top:159px; right:135px; }  /* Arrow to bottom-right node */
+          .arrow-to-4 { top:59px; right:125px; }   /* Arrow to top-right node */
+          .arrow-to-5 { top:159px; right:125px; }  /* Arrow to bottom-right node */
 
           /* Legend */
           .legend { position:absolute; bottom:50px; left:50px; display:flex; gap:40px; }
