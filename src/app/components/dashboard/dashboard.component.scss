@@ -311,6 +311,14 @@
             z-index: 10000;
             display: block;
             border-radius: 16px;
+          }
+
+          /* Specific positioning for Node 2 tooltip */
+          .node-2 .tooltip-backdrop {
+            top: 33%;
+            left: 60%;
+            transform: translateX(-50%);
+          }
 
             .node-tooltip {
               background: white;
@@ -376,7 +384,109 @@
                 }
               }
             }
-          }
+
+            /* Specific styling for Node 2 tooltip */
+            &.node-2-tooltip {
+              min-width: 320px;
+              padding: 20px;
+
+              .tooltip-header {
+                margin-bottom: 16px;
+
+                .server-icon-header {
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+
+                  .server-icon-small {
+                    width: 32px;
+                    height: 32px;
+                    background: #DBEAFE;
+                    border: 1px solid #93C5FD;
+                    border-radius: 8px;
+                    position: relative;
+
+                    &::after {
+                      content: "";
+                      position: absolute;
+                      left: 50%;
+                      top: 50%;
+                      transform: translate(-50%, -50%);
+                      width: 16px;
+                      height: 12px;
+                      background: #60A5FA;
+                      border-radius: 2px;
+                      box-shadow: inset 0 0 0 2px #E8F2FF;
+                    }
+
+                    &::before {
+                      content: "";
+                      position: absolute;
+                      left: 50%;
+                      top: 60%;
+                      transform: translateX(-50%);
+                      width: 8px;
+                      height: 2px;
+                      background: #E8F2FF;
+                      box-shadow: 0 3px 0 #93C5FD;
+                    }
+                  }
+
+                  .server-info {
+                    h4 {
+                      margin: 0;
+                      font-size: 16px;
+                      font-weight: 600;
+                      color: #111827;
+                      background: none;
+                    }
+
+                    .ip-address {
+                      font-size: 14px;
+                      color: #6B7280;
+                      display: block;
+                      margin-top: 2px;
+                    }
+                  }
+                }
+              }
+
+              .tooltip-content {
+                .info-row {
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                  margin-bottom: 12px;
+                  font-size: 14px;
+
+                  &:last-child {
+                    margin-bottom: 0;
+                  }
+
+                  .info-icon {
+                    font-size: 16px;
+                  }
+
+                  .info-label {
+                    color: #6B7280;
+                    font-weight: 500;
+                  }
+
+                  .info-value {
+                    font-weight: 600;
+
+                    &.highlight {
+                      color: #D97706;
+                    }
+
+                    &.blue {
+                      color: #2563EB;
+                    }
+                  }
+                }
+              }
+            }
+          // }
 
           /* Ensure node positioning is not affected by tooltip */
           .nodes-container {
@@ -437,6 +547,78 @@
             .legend .dot.danger{ background:#EF4444; } .legend .dot.warning{ background:#F59E0B; } .legend .dot.success{ background:#10B981; }
           }
           .legend .dot.success { background: #10B981; }
+        }
+
+        /* Node 2 Tooltip Styling */
+        .node-2-tooltip {
+          .shield-icon-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+
+            .shield-icon-inline {
+              width: 24px;
+              height: 24px;
+              flex-shrink: 0;
+            }
+
+            .node-title {
+              font-size: 1rem;
+              font-weight: 600;
+              color: #6B7280;
+              margin: 0;
+            }
+          }
+
+          .info-section {
+            .info-row {
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+              margin-bottom: 0.5rem;
+
+              .info-icon {
+                font-size: 14px;
+                flex-shrink: 0;
+              }
+
+              .info-text {
+                color: #6B7280;
+                font-size: 0.875rem;
+                // flex: 1;
+              }
+
+              .info-value.blue {
+                color: #6236CC;
+                font-weight: 600;
+                font-size: 0.875rem;
+                background: #F2EDFF;
+              }
+            }
+
+            .version-row {
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+              flex-wrap: wrap;
+              margin-top: 0.25rem;
+
+              .version-numbers.blue {
+                color: #6236CC;
+                font-weight: 600;
+                font-size: 0.875rem;
+                background: #F2EDFF;
+                padding: 2px 6px;
+                border-radius: 4px;
+              }
+
+              .version-text {
+                color: #6236CC;
+                font-size: 0.875rem;
+              }
+            }
+          }
         }
 
         /* Section title above cards */
