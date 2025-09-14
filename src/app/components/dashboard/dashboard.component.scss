@@ -201,29 +201,27 @@
           .conn-1-2 { top:114px; left:110px; width:90px; }   /* Loremipsumm → Loremipsu */
           .conn-2-3 { top:114px; left:270px; width:90px; }   /* Loremipsu → Loremipsu */
 
-          /* Straight diagonal connections from node 3 to both target nodes */
-          .connection-curve {
+          /* Y-shaped SVG connector from node 3 to both target nodes */
+          .y-connector {
             position: absolute;
-            background: #cbd5e1;
-            height: 2px;
+            top: 14px;
+            left: 430px;
+            width: 300px;
+            height: 200px;
             z-index: 1;
-            transform-origin: left center;
           }
 
-          .curve-to-4 {
-            /* Straight line from node 3 to top-right node */
-            top: 114px;
-            left: 430px;
-            width: 250px;
-            transform: rotate(-30deg);
+          .y-connector svg {
+            width: 100%;
+            height: 100%;
           }
 
-          .curve-to-5 {
-            /* Straight line from node 3 to bottom-right node */
-            top: 114px;
-            left: 430px;
-            width: 250px;
-            transform: rotate(30deg);
+          .connector-path {
+            fill: none;
+            stroke: #cbd5e1;
+            stroke-width: 2;
+            stroke-linejoin: round;
+            stroke-linecap: round;
           }
 
 
