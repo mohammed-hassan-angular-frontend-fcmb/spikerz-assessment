@@ -280,8 +280,8 @@
           .arrow-right { border-left:10px solid #cbd5e1; border-top:5px solid transparent; border-bottom:5px solid transparent; }
           .arrow-1-2 { top:109px; left:170px; }   /* Arrow between Loremipsumm → Loremipsu */
           .arrow-2-3 { top:109px; left:330px; }   /* Arrow between Loremipsu → Loremipsu */
-          .arrow-to-4 { top:59px; right:125px; }   /* Arrow to top-right node */
-          .arrow-to-5 { top:159px; right:125px; }  /* Arrow to bottom-right node */
+          .arrow-to-4 { top:59px; right:145px; }   /* Arrow to top-right node */
+          .arrow-to-5 { top:159px; right:145px; }  /* Arrow to bottom-right node */
 
           /* Legend */
           .legend {
@@ -520,6 +520,7 @@
               svg {
                 width: 64px;
                 height: 64px;
+                margin-left: -30px
               }
             }
           }
