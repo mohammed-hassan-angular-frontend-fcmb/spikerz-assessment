@@ -188,8 +188,8 @@
           .node-2 { top:80px; left:200px; }   /* Loremipsu (center-left) */
           .node-3 { top:80px; left:360px; }   /* Loremipsu (center-right) */
 
-          .node-4 { top:20px; right:40px; }   /* Loremipsumdolorsit (top-right) - aligns with Y upper branch */
-          .node-5 { top:180px; right:40px; }  /* Loremipsumdolorsit002 (bottom-right) - aligns with Y lower branch */
+          .node-4 { top:20px; right:25px; }   /* Loremipsumdolorsit (top-right) - aligns with Y upper branch */
+          .node-5 { top:140px; right:10px; }  /* Loremipsumdolorsit002 (bottom-right) - aligns with Y lower branch */
 
           /* Connection lines */
           .connection { position:absolute; background:#cbd5e1; z-index:1; }
@@ -206,7 +206,6 @@
             position: absolute;
             top: 54px;
             left: 430px;
-            // width: 300px;
             width: 200px;
             height: 120px;
             z-index: 1;
@@ -237,8 +236,8 @@
           .arrow-right { border-left:10px solid #cbd5e1; border-top:5px solid transparent; border-bottom:5px solid transparent; }
           .arrow-1-2 { top:109px; left:195px; }   /* Arrow between Loremipsumm → Loremipsu */
           .arrow-2-3 { top:109px; left:355px; }   /* Arrow between Loremipsu → Loremipsu */
-          .arrow-to-4 { top:49px; right:45px; }   /* Arrow to top-right node */
-          .arrow-to-5 { top:209px; right:45px; }  /* Arrow to bottom-right node */
+          .arrow-to-4 { top:79px; right:45px; }   /* Arrow to top-right node */
+          .arrow-to-5 { top:159px; right:45px; }  /* Arrow to bottom-right node */
 
           /* Legend */
           .legend { position:absolute; bottom:50px; left:50px; display:flex; gap:40px; }
