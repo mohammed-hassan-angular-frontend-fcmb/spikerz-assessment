@@ -628,6 +628,94 @@
           }
         }
 
+        .node-3 .tooltip-backdrop {
+            top: 33%;
+            left: 70%;
+            transform: translateX(-50%);
+          }
+
+        /* Node 3 Tooltip Styling */
+        .node-3-tooltip {
+          width: 100% !important;
+          min-width: 250px !important;
+          position: relative;
+          // left: 15% !important;
+
+          .shield-icon-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+
+            .shield-icon-inline {
+              width: 24px;
+              height: 24px;
+              flex-shrink: 0;
+            }
+
+            .node-title {
+              font-size: 1rem;
+              font-weight: 600;
+              color: #6B7280;
+              margin: 0;
+            }
+          }
+
+          .info-section {
+            .info-row {
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+              margin-bottom: 0.5rem;
+
+              .info-icon {
+                font-size: 14px;
+                flex-shrink: 0;
+              }
+
+              .info-text {
+                color: #6B7280;
+                font-size: 0.875rem;
+                white-space: nowrap;
+              }
+
+              .info-value.blue {
+                color: #6236CC;
+                font-weight: 600;
+                font-size: 0.875rem;
+                background: #F2EDFF;
+                padding: 2px 6px;
+                border-radius: 4px;
+                white-space: nowrap;
+              }
+            }
+
+            .version-row {
+              display: flex;
+              align-items: center;
+              gap: 0.25rem;
+              flex-wrap: wrap;
+              margin-top: 0.25rem;
+
+              .version-numbers.blue {
+                color: #6236CC;
+                font-weight: 600;
+                font-size: 0.875rem;
+                background: #F2EDFF;
+                padding: 2px 6px;
+                border-radius: 4px;
+                white-space: nowrap;
+              }
+
+              .version-text {
+                color: #6236CC;
+                font-size: 0.875rem;
+                white-space: nowrap;
+              }
+            }
+          }
+        }
+
         /* Section title above cards */
         .section-title-container {
           margin-bottom: 1rem;

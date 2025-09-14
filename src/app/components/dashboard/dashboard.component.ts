@@ -27,6 +27,7 @@ export class DashboardComponent {
   // Tooltip state
   showNodeTooltip = false;
   showNode2Tooltip = false;
+  showNode3Tooltip = false;
 
   // Dashboard data for the right panel
   get dashboardStats() {
