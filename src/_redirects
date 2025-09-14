@@ -1,0 +1,8 @@
+# Netlify redirects for Angular SPA
+# This file will be copied to the dist folder during build
+
+# Redirect all routes to index.html for Angular routing
+/*    /index.html   200
+
+# Optional: Redirect common 404 paths
+/404  /index.html   200
