@@ -1,8 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@use 'tailwindcss/base';
+@use 'tailwindcss/components';
+@use 'tailwindcss/utilities';
 
 /* PrimeNG Theme - Using CDN for now due to build issues */
 /* @import '~primeng/resources/themes/lara-light-blue/theme.css'; */
