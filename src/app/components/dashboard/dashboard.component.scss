@@ -198,8 +198,8 @@
           .connection-branch { background:#cbd5e1; border-radius:2px; }
 
           /* Straight connections between first 3 nodes */
-          .conn-1-2 { top:114px; left:110px; width:90px; }   /* Loremipsumm → Loremipsu */
-          .conn-2-3 { top:114px; left:270px; width:90px; }   /* Loremipsu → Loremipsu */
+          .conn-1-2 { top:114px; left:110px; width:70px; }   /* Loremipsumm → Loremipsu */
+          .conn-2-3 { top:114px; left:270px; width:70px; }   /* Loremipsu → Loremipsu */
 
           /* Y-shaped SVG connector from node 3 to both target nodes */
           .y-connector {
@@ -234,8 +234,8 @@
           /* Arrows */
           .arrow { position:absolute; width:0; height:0; z-index:5; }
           .arrow-right { border-left:10px solid #cbd5e1; border-top:5px solid transparent; border-bottom:5px solid transparent; }
-          .arrow-1-2 { top:109px; left:195px; }   /* Arrow between Loremipsumm → Loremipsu */
-          .arrow-2-3 { top:109px; left:355px; }   /* Arrow between Loremipsu → Loremipsu */
+          .arrow-1-2 { top:109px; left:170px; }   /* Arrow between Loremipsumm → Loremipsu */
+          .arrow-2-3 { top:109px; left:330px; }   /* Arrow between Loremipsu → Loremipsu */
           .arrow-to-4 { top:59px; right:135px; }   /* Arrow to top-right node */
           .arrow-to-5 { top:159px; right:135px; }  /* Arrow to bottom-right node */
 
