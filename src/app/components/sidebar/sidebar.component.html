@@ -1,0 +1,63 @@
+<aside class="sidebar" [class.collapsed]="sidebarCollapsed()">
+  <!-- Toggle switcher (protruding green circle) -->
+  <button class="nav-switcher" (click)="toggleSidebar()" type="button" [attr.aria-label]="sidebarCollapsed() ? 'Expand' : 'Collapse'">
+    <i class="pi" [ngClass]="sidebarCollapsed() ? 'pi-angle-right' : 'pi-angle-left'"></i>
+  </button>
+  @if (sidebarCollapsed()) {
+    <div class="collapsed-active" [title]="activeItem?.label || ''">
+      <img [src]="'assets/icons/' + (activeItem?.icon ?? 'grid') + '1.svg'" alt="" />
+    </div>
+  }
+
+
+  <!-- Main nav -->
+  <nav class="nav">
+    <ul class="section">
+      @for (item of topItems; track item.id) {
+        <li class="item" [class.active]="item.active">
+          <button class="link" (click)="onItemClick(item)" [title]="sidebarCollapsed() ? item.label : null">
+            <img class="icon-svg" [src]="'assets/icons/' + item.icon + '1.svg'" alt="" />
+            @if (!sidebarCollapsed()) { <span class="label">{{ item.label }}</span> }
+          </button>
+        </li>
+      }
+    </ul>
+
+    <ul class="section bottom" style="margin-top: auto; margin-bottom: 16px;">
+      @for (item of bottomItems; track item.id) {
+        <li class="item" [class.active]="item.active">
+          <button class="link" (click)="onItemClick(item)" [title]="sidebarCollapsed() ? item.label : null">
+            <img class="icon-svg" [src]="'assets/icons/' + item.icon + '1.svg'" alt="" />
+            @if (!sidebarCollapsed()) { <span class="label">{{ item.label }}</span> }
+          </button>
+        </li>
+      }
+    </ul>
+  </nav>
+
+  <!-- Footer profile with logout -->
+  <div class="footer">
+    @if (!sidebarCollapsed()) {
+      <div class="profile">
+        <div class="avatar">
+          <div class="circle"><img src="assets/icons/profile1.svg" alt="" /></div>
+        </div>
+        <div class="meta">
+          <div class="name">Lorem</div>
+          <div class="role">Lorem</div>
+        </div>
+        <!-- Logout button -->
+        <button class="logout" title="Logout" type="button" (click)="onLogout()">
+          <img src="assets/icons/logout1.svg" alt="Logout" />
+        </button>
+      </div>
+    }
+    @if (sidebarCollapsed()) {
+      <div class="profile collapsed-only">
+        <div class="avatar">
+          <div class="circle"><img src="assets/icons/profile1.svg" alt="" /></div>
+        </div>
+      </div>
+    }
+  </div>
+</aside>

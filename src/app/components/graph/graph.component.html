@@ -1,0 +1,118 @@
+<div class="graph-container" #graphContainer (click)="onBackgroundClick()">
+  <ngx-graph
+    class="chart-container"
+    [view]="view"
+    [links]="links"
+    [nodes]="nodes"
+    [clusters]="[]"
+    [layout]="layout"
+    [layoutSettings]="layoutSettings"
+    [curve]="curve"
+    [autoZoom]="autoZoom"
+    [autoCenter]="autoCenter"
+  >
+    <!-- Custom node template: compact blue tile + labels + optional badge -->
+    <ng-template #nodeTemplate let-node>
+      <svg:g
+        class="node-group"
+        (click)="onNodeClick($event, node)"
+        (mouseenter)="onNodeMouseEnter(node)"
+        (mouseleave)="onNodeMouseLeave(node)"
+      >
+        <!-- Tile background -->
+        <svg:rect
+          [attr.width]="96"
+          [attr.height]="36"
+          [attr.x]="-48"
+          [attr.y]="-24"
+          fill="#F0F7FF"
+          stroke="#93C5FD"
+          stroke-width="1.5"
+          rx="10"
+          ry="10"
+          class="node-rect"
+        />
+
+        <!-- Small badge (top-right) when badge count present) -->
+        @if (node.data?.badge && node.data?.badge > 0) {
+          <svg:g>
+            <svg:circle cx="44" cy="-22" r="8" fill="#EF4444"></svg:circle>
+            <svg:text x="44" y="-18" text-anchor="middle" fill="#fff" class="badge-text">{{ node.data.badge }}</svg:text>
+          </svg:g>
+        }
+
+        <!-- Minimal device glyph -->
+        <svg:rect x="-10" y="-10" width="20" height="14" rx="2" ry="2" fill="#60A5FA"></svg:rect>
+        <svg:rect x="-8" y="-8" width="16" height="10" rx="1" ry="1" fill="#E8F2FF"></svg:rect>
+        <svg:rect x="-6" y="-6" width="12" height="2" fill="#60A5FA"></svg:rect>
+        <svg:rect x="-6" y="-3" width="8" height="2" fill="#93C5FD"></svg:rect>
+
+        <!-- Primary label -->
+        <svg:text
+          x="0"
+          y="16"
+          text-anchor="middle"
+          class="node-label"
+          fill="#334155"
+        >
+          {{ node.label.length > 14 ? node.label.substring(0, 14) + '…' : node.label }}
+        </svg:text>
+
+        <!-- Secondary label (IP) if provided -->
+        @if (node.data?.ip) {
+          <svg:text
+            x="0"
+            y="28"
+            text-anchor="middle"
+            class="node-sublabel"
+            fill="#64748B"
+          >
+            {{ node.data.ip }}
+          </svg:text>
+        }>
+      </svg:g>
+    </ng-template>
+
+    <!-- Custom link template -->
+    <ng-template #linkTemplate let-link>
+      <svg:g class="edge">
+        <svg:path
+          class="line"
+          stroke-width="1.5"
+          stroke="#CBD5E1"
+          fill="none"
+          [attr.d]="link.line"
+          marker-end="url(#arrow)"
+        />
+      </svg:g>
+    </ng-template>
+
+    <!-- Arrow marker definition -->
+    <svg:defs>
+      <svg:marker
+        id="arrow"
+        viewBox="0 -5 10 10"
+        refX="8"
+        refY="0"
+        markerWidth="4"
+        markerHeight="4"
+        orient="auto"
+      >
+        <svg:path
+          d="M0,-5L10,0L0,5"
+          fill="#CBD5E1"
+        />
+      </svg:marker>
+    </svg:defs>
+  </ngx-graph>
+
+  <!-- Loading state -->
+  @if (nodes.length === 0) {
+    <div class="loading-overlay">
+      <div class="loading-spinner">
+        <i class="pi pi-spin pi-spinner"></i>
+        <p>Loading graph data...</p>
+      </div>
+    </div>
+  }
+</div>

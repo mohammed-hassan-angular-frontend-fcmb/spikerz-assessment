@@ -1,0 +1,105 @@
+<!-- Popover backdrop -->
+<div
+  class="popover-backdrop"
+  *ngIf="isVisible"
+  (click)="onBackdropClick($event)"
+>
+  <!-- Popover content -->
+  <div
+    #popoverElement
+    class="popover-content"
+    [style.left.px]="position.x"
+    [style.top.px]="position.y"
+    *ngIf="popoverData"
+  >
+    <!-- Popover header -->
+    <div class="popover-header">
+      <div class="header-content">
+        <h3 class="popover-title">{{ popoverData.title }}</h3>
+        <div class="status-badge" [ngClass]="getStatusColor(popoverData.status)">
+          <i class="pi" [ngClass]="getStatusIcon(popoverData.status)"></i>
+          <span>{{ popoverData.status | titlecase }}</span>
+        </div>
+      </div>
+      <button
+        class="close-btn"
+        (click)="onClose()"
+        type="button"
+        aria-label="Close popover"
+      >
+        <i class="pi pi-times"></i>
+      </button>
+    </div>
+
+    <!-- Popover body -->
+    <div class="popover-body">
+      <!-- Description -->
+      <div class="section">
+        <h4 class="section-title">Description</h4>
+        <p class="section-content">{{ popoverData.description }}</p>
+      </div>
+
+      <!-- Details -->
+      <div class="section" *ngIf="popoverData.details && Object.keys(popoverData.details).length > 0">
+        <h4 class="section-title">Extra</h4>
+        <div class="details-grid">
+          <div
+            class="detail-item"
+            *ngFor="let item of Object.entries(popoverData.details)"
+          >
+            <span class="detail-label">{{ item[0] | titlecase }}:</span>
+            <span class="detail-value">{{ item[1] }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Risk Assessment (if applicable) -->
+      <div class="section" *ngIf="popoverData.status === 'critical' || popoverData.status === 'high'">
+        <h4 class="section-title">Lorem Ipsum Dolor Sit</h4>
+        <div class="risk-assessment">
+          <div class="risk-item">
+            <span class="risk-label">Asset</span>
+            <span class="risk-value">{{ popoverData.details.asset || 'Loremipsumdolorit' }}</span>
+          </div>
+          <div class="risk-item">
+            <span class="risk-label">Contextual Risk</span>
+            <span class="risk-value">{{ popoverData.details.contextualRisk || 'Critical' }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Risk Chart Placeholder -->
+      <div class="section" *ngIf="popoverData.status === 'critical'">
+        <h4 class="section-title">Contextual Risk</h4>
+        <div class="risk-chart">
+          <div class="chart-placeholder">
+            <div class="chart-circle">
+              <span class="chart-number">2</span>
+            </div>
+            <div class="chart-legend">
+              <div class="legend-item critical">
+                <span class="legend-dot"></span>
+                <span>2 Critical</span>
+              </div>
+              <div class="legend-item high">
+                <span class="legend-dot"></span>
+                <span>0 High</span>
+              </div>
+              <div class="legend-item medium">
+                <span class="legend-dot"></span>
+                <span>0 Medium</span>
+              </div>
+              <div class="legend-item low">
+                <span class="legend-dot"></span>
+                <span>0 Low</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popover arrow -->
+    <div class="popover-arrow"></div>
+  </div>
+</div>

@@ -1,0 +1,153 @@
+.graph-container {
+  @apply relative w-full h-full bg-gray-50 rounded-lg overflow-hidden;
+  min-height: 360px;
+
+  .chart-container {
+    @apply w-full h-full;
+
+    ::ng-deep {
+      .node-group {
+        cursor: pointer;
+        transition: transform 0.18s ease-in-out, filter 0.18s ease-in-out;
+
+        &:hover {
+          transform: scale(1.03);
+          filter: drop-shadow(0 4px 8px rgba(15, 23, 42, 0.12));
+        }
+
+        .node-rect {
+          transition: all 0.2s ease-in-out;
+        }
+
+        .node-label {
+          font-size: 11px;
+          font-weight: 600;
+          letter-spacing: 0.1px;
+          font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+        }
+
+        .node-sublabel {
+          font-size: 10px;
+          font-weight: 500;
+          font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+        }
+
+        .badge-text {
+          font-size: 10px;
+          font-weight: 700;
+          font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+        }
+      }
+
+      .edge {
+        .line {
+          transition: stroke-width 0.2s ease-in-out, stroke 0.2s ease-in-out;
+
+          &:hover {
+            stroke-width: 2.5;
+            stroke: #60A5FA;
+          }
+        }
+      }
+
+      // Graph controls styling
+      .ngx-graph {
+        .pan-zoom-controls {
+          @apply absolute top-4 right-4 bg-white rounded-lg shadow-md p-2;
+
+          button {
+            @apply p-2 m-1 rounded hover:bg-gray-100 transition-colors duration-200;
+            border: none;
+            background: none;
+            cursor: pointer;
+
+            &:hover {
+              @apply bg-gray-100;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .loading-overlay {
+    @apply absolute inset-0 flex items-center justify-center bg-white bg-opacity-90;
+
+    .loading-spinner {
+      @apply text-center;
+
+      i {
+        @apply text-4xl text-primary-500 mb-4;
+      }
+
+      p {
+        @apply text-gray-600 font-medium;
+      }
+    }
+  }
+}
+
+// Animations
+@keyframes pulse-critical {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .graph-container {
+    min-height: 300px;
+
+    .chart-container {
+      ::ng-deep {
+        .node-group {
+          .node-rect {
+            width: 100px;
+            height: 50px;
+            x: -50px;
+            y: -25px;
+          }
+
+          .node-label {
+            font-size: 10px;
+          }
+
+          .node-icon {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .graph-container {
+    min-height: 240px;
+
+    .chart-container {
+      ::ng-deep {
+        .node-group {
+          .node-rect {
+            width: 80px;
+            height: 40px;
+            x: -40px;
+            y: -20px;
+          }
+
+          .node-label {
+            font-size: 9px;
+          }
+
+          .node-icon {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,206 @@
+.popover-backdrop {
+  @apply fixed inset-0 bg-black bg-opacity-20 z-50;
+  backdrop-filter: blur(2px);
+  animation: fadeIn 0.2s ease-out;
+}
+
+.popover-content {
+  @apply absolute bg-white rounded-xl shadow-xl border border-gray-200;
+  width: 320px;
+  max-height: 500px;
+  overflow-y: auto;
+  animation: slideIn 0.3s ease-out;
+  z-index: 51;
+
+  .popover-header {
+    @apply flex items-start justify-between p-4 border-b border-gray-100;
+
+    .header-content {
+      @apply flex-1;
+
+      .popover-title {
+        @apply text-lg font-semibold text-gray-800 mb-2;
+      }
+
+      .status-badge {
+        @apply inline-flex items-center px-2 py-1 rounded-full text-xs font-medium;
+
+        i {
+          @apply mr-1;
+        }
+      }
+    }
+
+    .close-btn {
+      @apply p-1 rounded-lg hover:bg-gray-100 transition-colors duration-200;
+      border: none;
+      background: none;
+      cursor: pointer;
+
+      i {
+        @apply text-gray-400 hover:text-gray-600;
+      }
+    }
+  }
+
+  .popover-body {
+    @apply p-4;
+
+    .section {
+      @apply mb-4 last:mb-0;
+
+      .section-title {
+        @apply text-sm font-semibold text-gray-700 mb-2;
+      }
+
+      .section-content {
+        @apply text-sm text-gray-600 leading-relaxed;
+      }
+
+      .details-grid {
+        @apply space-y-2;
+
+        .detail-item {
+          @apply flex justify-between items-center;
+
+          .detail-label {
+            @apply text-sm font-medium text-gray-500;
+          }
+
+          .detail-value {
+            @apply text-sm text-gray-800 font-medium;
+          }
+        }
+      }
+
+      .risk-assessment {
+        @apply space-y-2;
+
+        .risk-item {
+          @apply flex justify-between items-center py-1;
+
+          .risk-label {
+            @apply text-sm font-medium text-gray-500;
+          }
+
+          .risk-value {
+            @apply text-sm text-gray-800 font-medium;
+          }
+        }
+      }
+
+      .risk-chart {
+        .chart-placeholder {
+          @apply flex items-center justify-between;
+
+          .chart-circle {
+            @apply w-16 h-16 rounded-full border-4 border-danger-500 flex items-center justify-center bg-white;
+            position: relative;
+
+            .chart-number {
+              @apply text-2xl font-bold text-danger-600;
+            }
+          }
+
+          .chart-legend {
+            @apply flex-1 ml-4 space-y-1;
+
+            .legend-item {
+              @apply flex items-center text-xs;
+
+              .legend-dot {
+                @apply w-2 h-2 rounded-full mr-2;
+              }
+
+              &.critical .legend-dot {
+                @apply bg-danger-500;
+              }
+
+              &.high .legend-dot {
+                @apply bg-warning-500;
+              }
+
+              &.medium .legend-dot {
+                @apply bg-success-500;
+              }
+
+              &.low .legend-dot {
+                @apply bg-primary-500;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .popover-arrow {
+    @apply absolute w-3 h-3 bg-white border-l border-t border-gray-200 transform rotate-45;
+    top: -6px;
+    left: 20px;
+  }
+}
+
+// Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .popover-content {
+    width: 280px;
+    max-height: 400px;
+
+    .popover-header {
+      @apply p-3;
+
+      .header-content {
+        .popover-title {
+          @apply text-base;
+        }
+      }
+    }
+
+    .popover-body {
+      @apply p-3;
+
+      .section {
+        @apply mb-3;
+
+        .section-title {
+          @apply text-xs;
+        }
+
+        .section-content {
+          @apply text-xs;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .popover-content {
+    width: calc(100vw - 40px);
+    max-width: 280px;
+    left: 20px !important;
+    right: 20px;
+  }
+}
