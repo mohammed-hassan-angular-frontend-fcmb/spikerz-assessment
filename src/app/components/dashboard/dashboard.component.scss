@@ -634,6 +634,12 @@
             transform: translateX(-50%);
           }
 
+        .node-4 .tooltip-backdrop {
+            top: 1%;
+            left: 80%;
+            transform: translateX(-50%);
+          }
+
         /* Node 3 Tooltip Styling */
         .node-3-tooltip {
           width: 100% !important;
@@ -711,6 +717,76 @@
                 color: #6236CC;
                 font-size: 0.875rem;
                 white-space: nowrap;
+              }
+            }
+          }
+        }
+
+        /* Node 4 Tooltip Styling */
+        .node-4-tooltip {
+          width: 100% !important;
+          min-width: 280px !important;
+          position: relative;
+
+          .shield-icon-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+
+            .shield-icon-inline {
+              width: 24px;
+              height: 24px;
+              flex-shrink: 0;
+            }
+
+            .node-title {
+              font-size: 1rem;
+              font-weight: 600;
+              color: #111827;
+              margin: 0;
+            }
+          }
+
+          .node-ip-header {
+            font-size: 0.875rem;
+            color: #6B7280;
+            margin-bottom: 1rem;
+          }
+
+          .tooltip-content {
+            .info-section {
+              .info-row {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+                font-size: 14px;
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+
+                .info-icon {
+                  font-size: 16px;
+                }
+
+                .info-text {
+                  color: #6B7280;
+                  font-weight: 500;
+                }
+
+                .info-value {
+                  font-weight: 600;
+
+                  &.highlight {
+                    color: #D97706;
+                  }
+
+                  &.blue {
+                    color: #2563EB;
+                  }
+                }
               }
             }
           }
