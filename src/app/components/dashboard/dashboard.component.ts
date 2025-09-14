@@ -24,6 +24,9 @@ export class DashboardComponent {
   readonly nodeCount = this.graphDataService.nodeCount;
   readonly criticalNodes = this.graphDataService.criticalNodes;
 
+  // Tooltip state
+  showNodeTooltip = false;
+
   // Dashboard data for the right panel
   get dashboardStats() {
     return {

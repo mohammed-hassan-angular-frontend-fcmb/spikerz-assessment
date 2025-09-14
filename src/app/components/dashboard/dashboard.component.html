@@ -46,11 +46,33 @@
               <div class="diagram-container">
                 <div class="nodes-container">
                   <!-- Node 1 -->
-                  <div class="node node-1">
+                  <div class="node node-1" (mouseenter)="showNodeTooltip = true" (mouseleave)="showNodeTooltip = false">
                     <div class="node-icon user">
                       <div class="status-indicator success"></div>
                     </div>
                     <div class="node-label">Loremipsumm</div>
+
+                    <!-- Hover Card with Backdrop -->
+                    <div class="tooltip-backdrop" *ngIf="showNodeTooltip">
+                      <div class="node-tooltip">
+                        <div class="tooltip-header">
+                          <h4>Lorem Ipsum Dolor Sit</h4>
+                        </div>
+                        <div class="tooltip-content">
+                          <div class="version-grid">
+                            <div class="version-item red">1.2.3.4</div>
+                            <div class="version-item red">1.2.3.4</div>
+                            <div class="version-item red">1.2.3.4</div>
+                            <div class="version-item red">1.2.3.4</div>
+                            <div class="version-item red">1.2.3.4</div>
+                            <div class="version-item red">1.2.3.4</div>
+                          </div>
+                          <div class="lorem-section">
+                            <span class="lorem-label">Lorem:  1.2.3.4</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
                   <!-- Node 2 -->
