@@ -35,155 +35,157 @@
           </div>
         </div>
       </section>
+        <!-- Right column: Graph on top, assets + risk below -->
+        <section class="right-column">
+          <div class="card">
+            <!-- Graph card -->
+            <div class="card graph-card">
+              <div class="card-section">
+                <h2 class="panel-title text-green">Lorem Lorem Lorem</h2>
+              </div>
+              <div class="diagram-container">
+                <div class="nodes-container">
+                  <!-- Node 1 -->
+                  <div class="node node-1">
+                    <div class="node-icon user">
+                      <div class="status-indicator success"></div>
+                    </div>
+                    <div class="node-label">Loremipsumm</div>
+                  </div>
 
-      <!-- Right column: Graph on top, assets + risk below -->
-      <section class="right-column">
-        <!-- Graph card -->
-        <div class="card graph-card">
-          <div class="card-section">
-            <h2 class="panel-title text-green">Lorem Lorem Lorem</h2>
+                  <!-- Node 2 -->
+                  <div class="node node-2">
+                    <div class="node-icon server"></div>
+                    <div class="node-label">Loremipsu</div>
+                  </div>
+
+                  <!-- Node 3 -->
+                  <div class="node node-3">
+                    <div class="node-icon server"></div>
+                    <div class="node-label">Loremipsu</div>
+                  </div>
+
+
+                  <!-- Node 4 -->
+                  <div class="node node-4">
+                    <div class="node-icon server">
+                      <div class="status-indicator error"></div>
+                    </div>
+                    <div class="node-label">Loremipsumdolorsit</div>
+                    <div class="node-ip">192.168.1.1</div>
+                  </div>
+
+                  <!-- Node 5 -->
+                  <div class="node node-5">
+                    <div class="node-icon server">
+                      <div class="status-indicator error"></div>
+                    </div>
+                    <div class="node-label">Loremipsumdolorsit002</div>
+                    <div class="node-ip">192.168.1.2</div>
+                  </div>
+
+                  <!-- Connection lines -->
+                  <div class="connection connection-horizontal conn-1-2"></div>
+                  <div class="connection connection-horizontal conn-2-3"></div>
+
+                  <!-- Y-shaped connector from node 3 to both target nodes -->
+                  <div class="y-connector">
+                    <svg viewBox="0 0 200 160">
+                      <!-- Main horizontal line from node 3 -->
+                      <path
+                        class="connector-path"
+                        d="M 0 80 L 50 80"
+                      />
+
+                      <!-- Upper branch to node 4 -->
+                      <path
+                        class="connector-path"
+                        d="M 50 80 L 100 30 L 200 30"
+                      />
+
+                      <!-- Lower branch to node 5 -->
+                      <path
+                        class="connector-path"
+                        d="M 50 80 L 100 130 L 200 130"
+                      />
+                    </svg>
+                  </div>
+
+                  <!-- Arrows -->
+                  <div class="arrow arrow-right arrow-1-2"></div>
+                  <div class="arrow arrow-right arrow-2-3"></div>
+                  <div class="arrow arrow-right arrow-to-4"></div>
+                  <div class="arrow arrow-right arrow-to-5"></div>
+                </div>
+
+                <!-- Legend -->
+                <div class="legend">
+                  <div class="legend-item">
+                    <div class="legend-icon error"></div>
+                    <span class="legend-text error">Lorem</span>
+                  </div>
+                  <div class="legend-item">
+                    <div class="legend-icon warning"></div>
+                    <span class="legend-text warning">Lorem</span>
+                  </div>
+                  <div class="legend-item">
+                    <div class="legend-icon success"></div>
+                    <span class="legend-text success">Lorem</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom row: assets list + contextual risk -->
+            <div class="bottom-row">
+              <div class="card list-card">
+                <div class="list-header">
+                  <h3 class="text-green">Lorem Ipsum Dolor Sit</h3>
+                </div>
+                <div class="list-subheader">
+                  <div class="col-asset">Asset</div>
+                  <div class="col-risk">Contextual Risk</div>
+                </div>
+                <div class="list-body">
+                  <div class="asset-row">
+                    <div class="row-icon"></div>
+                    <div class="asset-meta">
+                      <div class="asset-name">Loremipsumdolorsit</div>
+                      <div class="asset-ip">192.168.1.1</div>
+                    </div>
+                    <span class="badge critical">Critical</span>
+                  </div>
+                  <div class="asset-row">
+                    <div class="row-icon"></div>
+                    <div class="asset-meta">
+                      <div class="asset-name">Loremipsumdolorsit002</div>
+                      <div class="asset-ip">192.168.1.2</div>
+                    </div>
+                    <span class="badge critical">Critical</span>
+                  </div>
+                </div>
+                <div class="list-footer">
+                  <span class="pager"><i class="pi pi-angle-left"></i> Showing 1-2 of 2 <i class="pi pi-angle-right"></i></span>
+                </div>
+              </div>
+
+              <div class="card risk-card">
+                <div class="risk-header">Contextual Risk</div>
+                <ul class="risk-legend">
+                  <li><span class="dot danger"></span> 2 Critical</li>
+                  <li><span class="dot high"></span> 0 High</li>
+                  <li><span class="dot medium"></span> 0 Medium</li>
+                  <li><span class="dot low"></span> 0 Low</li>
+                </ul>
+                <div class="risk-donut">
+                  <div class="donut-ring"></div>
+                  <div class="donut-value">2</div>
+                </div>
+              </div>
+            </div>
+
           </div>
-          <div class="diagram-container">
-            <div class="nodes-container">
-              <!-- Node 1 -->
-              <div class="node node-1">
-                <div class="node-icon user">
-                  <div class="status-indicator success"></div>
-                </div>
-                <div class="node-label">Loremipsumm</div>
-              </div>
-
-              <!-- Node 2 -->
-              <div class="node node-2">
-                <div class="node-icon server"></div>
-                <div class="node-label">Loremipsu</div>
-              </div>
-
-              <!-- Node 3 -->
-              <div class="node node-3">
-                <div class="node-icon server"></div>
-                <div class="node-label">Loremipsu</div>
-              </div>
-
-
-              <!-- Node 4 -->
-              <div class="node node-4">
-                <div class="node-icon server">
-                  <div class="status-indicator error"></div>
-                </div>
-                <div class="node-label">Loremipsumdolorsit</div>
-                <div class="node-ip">192.168.1.1</div>
-              </div>
-
-              <!-- Node 5 -->
-              <div class="node node-5">
-                <div class="node-icon server">
-                  <div class="status-indicator error"></div>
-                </div>
-                <div class="node-label">Loremipsumdolorsit002</div>
-                <div class="node-ip">192.168.1.2</div>
-              </div>
-
-              <!-- Connection lines -->
-              <div class="connection connection-horizontal conn-1-2"></div>
-              <div class="connection connection-horizontal conn-2-3"></div>
-
-              <!-- Y-shaped connector from node 3 to both target nodes -->
-              <div class="y-connector">
-                <svg viewBox="0 0 200 160">
-                  <!-- Main horizontal line from node 3 -->
-                  <path
-                    class="connector-path"
-                    d="M 0 80 L 50 80"
-                  />
-
-                  <!-- Upper branch to node 4 -->
-                  <path
-                    class="connector-path"
-                    d="M 50 80 L 100 30 L 200 30"
-                  />
-
-                  <!-- Lower branch to node 5 -->
-                  <path
-                    class="connector-path"
-                    d="M 50 80 L 100 130 L 200 130"
-                  />
-                </svg>
-              </div>
-
-              <!-- Arrows -->
-              <div class="arrow arrow-right arrow-1-2"></div>
-              <div class="arrow arrow-right arrow-2-3"></div>
-              <div class="arrow arrow-right arrow-to-4"></div>
-              <div class="arrow arrow-right arrow-to-5"></div>
-            </div>
-
-            <!-- Legend -->
-            <div class="legend">
-              <div class="legend-item">
-                <div class="legend-icon error"></div>
-                <span class="legend-text error">Lorem</span>
-              </div>
-              <div class="legend-item">
-                <div class="legend-icon warning"></div>
-                <span class="legend-text warning">Lorem</span>
-              </div>
-              <div class="legend-item">
-                <div class="legend-icon success"></div>
-                <span class="legend-text success">Lorem</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bottom row: assets list + contextual risk -->
-        <div class="bottom-row">
-          <div class="card list-card">
-            <div class="list-header">
-              <h3 class="text-green">Lorem Ipsum Dolor Sit</h3>
-            </div>
-            <div class="list-subheader">
-              <div class="col-asset">Asset</div>
-              <div class="col-risk">Contextual Risk</div>
-            </div>
-            <div class="list-body">
-              <div class="asset-row">
-                <div class="row-icon"></div>
-                <div class="asset-meta">
-                  <div class="asset-name">Loremipsumdolorsit</div>
-                  <div class="asset-ip">192.168.1.1</div>
-                </div>
-                <span class="badge critical">Critical</span>
-              </div>
-              <div class="asset-row">
-                <div class="row-icon"></div>
-                <div class="asset-meta">
-                  <div class="asset-name">Loremipsumdolorsit002</div>
-                  <div class="asset-ip">192.168.1.2</div>
-                </div>
-                <span class="badge critical">Critical</span>
-              </div>
-            </div>
-            <div class="list-footer">
-              <span class="pager"><i class="pi pi-angle-left"></i> Showing 1-2 of 2 <i class="pi pi-angle-right"></i></span>
-            </div>
-          </div>
-
-          <div class="card risk-card">
-            <div class="risk-header">Contextual Risk</div>
-            <ul class="risk-legend">
-              <li><span class="dot danger"></span> 2 Critical</li>
-              <li><span class="dot high"></span> 0 High</li>
-              <li><span class="dot medium"></span> 0 Medium</li>
-              <li><span class="dot low"></span> 0 Low</li>
-            </ul>
-            <div class="risk-donut">
-              <div class="donut-ring"></div>
-              <div class="donut-value">2</div>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
     </div>
   </main>
 
