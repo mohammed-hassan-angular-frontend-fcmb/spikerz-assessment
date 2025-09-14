@@ -105,7 +105,7 @@
         .card { @apply bg-white rounded-2xl shadow-sm border border-gray-200; }
 
         .graph-card {
-          @apply p-0 overflow-hidden;
+          @apply p-0 mb-5 overflow-hidden;
 
           .card-section { @apply px-5 pt-4 pb-2; }
           .panel-title { @apply font-semibold; font-size: 14px; color: #16A34A; }
