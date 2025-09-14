@@ -303,15 +303,14 @@
           /* Node Tooltip Styles */
           .tooltip-backdrop {
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            top: 33%;
+            left: 50%;
+            right: auto;
+            bottom: auto;
             background: rgba(0, 0, 0, 0.1);
             z-index: 10000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: block;
+            border-radius: 16px;
 
             .node-tooltip {
               background: white;
@@ -335,9 +334,6 @@
               }
 
               .tooltip-content {
-                                  // padding-left: 20px;
-                                  // padding-right: 20px;
-
                 .version-grid {
                   display: grid;
                   grid-template-columns: repeat(3, 1fr);
