@@ -347,6 +347,19 @@
           .legend .dot.success { background: #10B981; }
         }
 
+        /* Section title above cards */
+        .section-title-container {
+          margin-bottom: 1rem;
+
+          .section-title {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: #16A34A !important;
+            margin: 0;
+            line-height: 1.25;
+          }
+        }
+
         .bottom-row {
           display: grid;
           grid-template-columns: 1fr 1fr; /* Equal width columns */
@@ -423,24 +436,41 @@
             flex-direction: column;
             height: 100%; /* Ensure equal height */
 
-            .risk-header {
-              font-size: 1rem;
-              font-weight: 600;
-              color: #111827;
-              margin-bottom: 0.75rem;
+            .risk-content {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              flex: 1;
+              gap: 0.25rem; /* Even smaller gap for more room */
+            }
+
+            .legend-section {
+              flex: 1;
+
+              .risk-header {
+                font-size: 1rem;
+                font-weight: 600;
+                color: #111827;
+                margin-bottom: 0.75rem;
+                text-align: left; /* Align with legend items */
+              }
             }
 
             .risk-legend {
               font-size: 0.875rem;
               color: #6B7280;
-              margin-bottom: 0.75rem;
               list-style: none;
               padding: 0;
+              margin: 0;
 
               li {
                 display: flex;
                 align-items: center;
                 margin-bottom: 0.5rem;
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
               }
 
               .dot {
@@ -459,23 +489,23 @@
 
             .risk-donut {
               position: relative;
-              flex: 1;
               display: flex;
               align-items: center;
               justify-content: center;
+              flex-shrink: 0;
             }
 
             .donut-ring {
               border-radius: 50%;
-              width: 110px;
-              height: 110px;
-              border: 8px solid #DC2626;
+              width: 140px;
+              height: 140px;
+              border: 10px solid #DC2626;
               background: white;
             }
 
             .donut-value {
               position: absolute;
-              font-size: 32px;
+              font-size: 42px;
               font-weight: 600;
               color: #1F2937;
             }
