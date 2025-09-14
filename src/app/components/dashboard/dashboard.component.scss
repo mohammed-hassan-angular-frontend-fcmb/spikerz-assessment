@@ -105,6 +105,71 @@
             .kv-key { font-size: 13px; font-weight: 600; color: #374151; }
             .kv-val { font-size: 13px; color: #111827; }
           }
+
+          /* Server Cards Section */
+          .server-cards-section {
+            @apply mt-6 space-y-4;
+
+            .server-card {
+              @apply bg-white rounded-lg p-4 border border-gray-200 shadow-sm;
+
+              .server-card-header {
+                @apply mb-3;
+
+                .server-title {
+                  @apply text-sm font-semibold text-gray-900 m-0;
+                }
+              }
+
+              .server-card-content {
+                @apply flex items-center;
+
+                .server-left {
+                  @apply flex items-center space-x-3 flex-1;
+
+                  .server-icon {
+                    @apply flex-shrink-0;
+
+                    svg {
+                      @apply w-8 h-8;
+                    }
+                  }
+
+                  .server-details {
+                    @apply flex flex-col;
+
+                    .server-type {
+                      @apply text-sm font-medium text-gray-900;
+                    }
+
+                    .server-subtype {
+                      @apply text-xs text-gray-500;
+                    }
+                  }
+                }
+
+                .server-divider {
+                  @apply w-px bg-gray-300 h-12 mx-4 flex-shrink-0;
+                }
+
+                .server-right {
+                  @apply flex-1;
+
+                  .description-text {
+                    @apply text-sm text-gray-600 leading-relaxed;
+                  }
+                }
+              }
+            }
+
+            .server-text-section {
+              @apply py-2;
+
+              .server-description-text {
+                @apply text-sm text-gray-600 leading-relaxed m-0;
+              }
+            }
+          }
         }
       }
 
