@@ -743,28 +743,37 @@
 
           .shield-icon-header {
             display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 0.5rem;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
 
             .shield-icon-inline {
-              width: 24px;
-              height: 24px;
+              width: 32px;
+              height: 32px;
               flex-shrink: 0;
+              margin-top: 2px;
             }
 
-            .node-title {
-              font-size: 1rem;
-              font-weight: 600;
-              color: #111827;
-              margin: 0;
-            }
-          }
+            .node-info {
+              display: flex;
+              flex-direction: column;
+              gap: 0.25rem;
 
-          .node-ip-header {
-            font-size: 0.875rem;
-            color: #6B7280;
-            margin-bottom: 1rem;
+              .node-title {
+                font-size: 1rem;
+                font-weight: 600;
+                color: #111827;
+                margin: 0;
+                line-height: 1.2;
+              }
+
+              .node-ip-header {
+                font-size: 0.875rem;
+                color: #6B7280;
+                margin: 0;
+                line-height: 1.2;
+              }
+            }
           }
 
           .tooltip-content {
@@ -813,28 +822,37 @@
 
           .shield-icon-header {
             display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 0.5rem;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
 
             .shield-icon-inline {
-              width: 24px;
-              height: 24px;
+              width: 32px;
+              height: 32px;
               flex-shrink: 0;
+              margin-top: 2px;
             }
 
-            .node-title {
-              font-size: 1rem;
-              font-weight: 600;
-              color: #111827;
-              margin: 0;
-            }
-          }
+            .node-info {
+              display: flex;
+              flex-direction: column;
+              gap: 0.25rem;
 
-          .node-ip-header {
-            font-size: 0.875rem;
-            color: #6B7280;
-            margin-bottom: 1rem;
+              .node-title {
+                font-size: 1rem;
+                font-weight: 600;
+                color: #111827;
+                margin: 0;
+                line-height: 1.2;
+              }
+
+              .node-ip-header {
+                font-size: 0.875rem;
+                color: #6B7280;
+                margin: 0;
+                line-height: 1.2;
+              }
+            }
           }
 
           .tooltip-content {
