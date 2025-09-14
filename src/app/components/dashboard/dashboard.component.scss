@@ -121,42 +121,46 @@
                 }
               }
 
-              .server-card-content {
-                @apply flex items-center;
+              .server-card-wrapper {
+                @apply border border-gray-300 rounded-lg p-3;
 
-                .server-left {
-                  @apply flex items-center space-x-3 flex-1;
+                .server-card-content {
+                  @apply flex items-center;
 
-                  .server-icon {
-                    @apply flex-shrink-0;
+                  .server-left {
+                    @apply flex items-center space-x-3 flex-1;
 
-                    svg {
-                      @apply w-8 h-8;
+                    .server-icon {
+                      @apply flex-shrink-0;
+
+                      svg {
+                        @apply w-8 h-8;
+                      }
+                    }
+
+                    .server-details {
+                      @apply flex flex-col;
+
+                      .server-type {
+                        @apply text-sm font-medium text-gray-900;
+                      }
+
+                      .server-subtype {
+                        @apply text-xs text-gray-500;
+                      }
                     }
                   }
 
-                  .server-details {
-                    @apply flex flex-col;
-
-                    .server-type {
-                      @apply text-sm font-medium text-gray-900;
-                    }
-
-                    .server-subtype {
-                      @apply text-xs text-gray-500;
-                    }
+                  .server-divider {
+                    @apply w-px bg-gray-300 h-12 mx-4 flex-shrink-0;
                   }
-                }
 
-                .server-divider {
-                  @apply w-px bg-gray-300 h-12 mx-4 flex-shrink-0;
-                }
+                  .server-right {
+                    @apply flex-1;
 
-                .server-right {
-                  @apply flex-1;
-
-                  .description-text {
-                    @apply text-sm text-gray-600 leading-relaxed;
+                    .description-text {
+                      @apply text-sm text-gray-600 leading-relaxed;
+                    }
                   }
                 }
               }
