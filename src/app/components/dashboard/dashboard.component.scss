@@ -336,8 +336,8 @@
           .node-2 { top:80px; left:200px; }   /* Loremipsu (center-left) */
           .node-3 { top:80px; left:360px; }   /* Loremipsu (center-right) */
 
-          .node-4 { top:1px; right:20px; }   /* Loremipsumdolorsit (top-right) - aligns with Y upper branch */
-          .node-5 { top:140px; right:3px; }  /* Loremipsumdolorsit002 (bottom-right) - aligns with Y lower branch */
+          .node-4 { top:20px; right:40px; }   /* Loremipsumdolorsit (top-right) - aligns with Y upper branch */
+          .node-5 { top:160px; right:40px; }  /* Loremipsumdolorsit002 (bottom-right) - aligns with Y lower branch */
 
           /* Connection lines */
           .connection { position:absolute; background:#cbd5e1; z-index:1; }
@@ -349,28 +349,56 @@
           .conn-1-2 { top:114px; left:120px; width:60px; }   /* Loremipsumm → Loremipsu (with spacing) */
           .conn-2-3 { top:114px; left:280px; width:60px; }   /* Loremipsu → Loremipsu (with spacing) */
 
-          /* Y-shaped SVG connector from node 3 to both target nodes */
+          /* Y-shaped connector from node 3 to both target nodes - Clean Y Design */
           .y-connector {
             position: absolute;
-            top: 34px;
-            left: 430px;
-            width: 200px;
-            height: 160px;
+            top: 54px;
+            left: 425px;
+            width: 145px;
+            height: 122px;
             z-index: 1;
+            transform: rotate(90deg);
           }
 
-          .y-connector svg {
-            width: 100%;
-            height: 100%;
-            margin-left: 10px;
+          /* Y-stem (main horizontal line from node 3) */
+          .y-stem {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 24px;
+            background-color: #cbd5e1;
+            border-radius: 1px;
           }
 
-          .connector-path {
-            fill: none;
-            stroke: #cbd5e1;
-            stroke-width: 2;
-            stroke-linejoin: round;
-            stroke-linecap: round;
+          /* Y-branch base styling */
+          .y-branch {
+            position: absolute;
+            top: 10px;
+            width: 2px;
+            height: 90px;
+            background-color: #cbd5e1;
+            border-radius: 1px;
+            transform-origin: bottom center;
+          }
+
+          /* Left branch (upper in rotated view) */
+          .y-left {
+            left: 50%;
+            transform:
+              translateX(-90%)
+              rotate(-30deg)
+              skewX(-10deg);
+          }
+
+          /* Right branch (lower in rotated view) */
+          .y-right {
+            right: 50%;
+            transform:
+              translateX(90%)
+              rotate(30deg)
+              skewX(10deg);
           }
 
 
@@ -385,8 +413,8 @@
           .arrow-right { border-left:10px solid #cbd5e1; border-top:5px solid transparent; border-bottom:5px solid transparent; }
           .arrow-1-2 { top:109px; left:170px; }   /* Arrow between Loremipsumm → Loremipsu */
           .arrow-2-3 { top:109px; left:330px; }   /* Arrow between Loremipsu → Loremipsu */
-          .arrow-to-4 { top:59px; right:145px; }   /* Arrow to top-right node */
-          .arrow-to-5 { top:159px; right:145px; }  /* Arrow to bottom-right node */
+          .arrow-to-4 { top:49px; right:130px; }   /* Arrow to top-right node */
+          .arrow-to-5 { top:189px; right:130px; }  /* Arrow to bottom-right node */
 
           /* Legend */
           .legend {
