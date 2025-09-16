@@ -198,7 +198,7 @@
         position: sticky;
         top: 0;
         height: fit-content;
-        max-height: calc(100vh - 120px);
+        // max-height: calc(100vh - 120px);
         overflow-y: auto;
         display: flex;
         flex-direction: column;
@@ -228,7 +228,7 @@
         /* Global text-green class for this component */
         .text-green {
           color: #02983E !important;
-          margin-bottom: 20px;
+          margin-bottom: 10px;
           font-weight: 700;
           font-style: Bold;
           font-size: 20px;
@@ -311,15 +311,18 @@
           .graph-canvas .legend { display:flex; align-items:center; gap:20px; padding: 8px 12px; }
 
           /* Diagram container styles (updated as requested) */
-          .diagram-container { position:relative; width:100%; max-width:1100px; margin:0 auto; background:#ffffff; padding:10px 20px; border-radius:16px; box-shadow:0 10px 25px -5px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); min-height:400px; background-color: #FAFAFA; }
+          // .diagram-container { position:relative; width:100%; max-width:1100px; margin:0 auto; background:#ffffff; padding:10px 20px; border-radius:16px; box-shadow:0 10px 25px -5px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); min-height:400px; background-color: #FAFAFA; }
+          .diagram-container { position:relative; width:100%; max-width:1100px; margin:0 auto; background:#ffffff; padding:10px 20px; border-radius:16px; box-shadow:0 10px 25px -5px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); min-height:300px; background-color: #FAFAFA; }
           .diagram-title { font-size:28px; font-weight:700; color:#10b981; margin-bottom:60px; letter-spacing:-0.025em; }
-          .nodes-container { position:relative; height:350px; width:100%; }
+          // .nodes-container { position:relative; height:350px; width:100%; }
+          .nodes-container { position:relative; height:240px; width:100%; }
 
           /* SVG Network Container - unified responsive behavior */
           .svg-network-container {
             position: relative;
             width: 100%;
-            height: 250px;
+            // height: 250px;
+            height: 200px;
             transition: transform 0.3s ease-in-out;
             overflow: visible;
           }
@@ -333,7 +336,8 @@
           /* SVG responsive scaling */
           .svg-network-container svg {
             width: 100%;
-            height: 100%;
+            // height: 90%;
+            height: 120%;
             max-width: 1000px;
           }
           .node { position:absolute; display:flex; flex-direction:column; align-items:center; gap:12px; z-index:10; }
@@ -374,13 +378,13 @@
             left:50px;
             display:flex;
             gap:40px;
-            border-top: 1px solid #E5E7EB;
-            padding-top: 20px;
-            margin-top: 20px;
+            border-top: 2px solid #E5E7EB;
+            padding-top: 10px;
+            margin-top: 10px;
           }
-          .legend-item { display:flex; align-items:center; gap:10px; font-size:15px; font-weight:600; }
+          .legend-item { display:flex; align-items:center; gap:10px; font-size:15px; font-weight:700; }
           .legend-icon-svg { display:flex; align-items:center; justify-content:center; }
-          .legend-icon-svg svg { width:20px; height:20px; }
+          .legend-icon-svg svg { width:25px; height:25px; }
           .legend-text.error { color:#ef4444; }
           .legend-text.warning { color:#f59e0b; }
           .legend-text.success { color:#10b981; }
@@ -1001,6 +1005,7 @@
           display: grid;
           grid-template-columns: 1fr 1fr; /* Equal width columns */
           gap: 1rem;
+          margin-bottom: 50px;
           align-items: stretch; /* Make both cards same height */
 
           .list-card, .risk-card {
@@ -1021,10 +1026,10 @@
               grid-template-columns: 1fr auto;
               align-items: center;
               padding: 8px 20px;
-              font-size: 11px;
+              font-size: 13px;
               color: #6B7280; /* gray-500 */
-              border-bottom: 1px solid #F3F4F6;
-
+              border-bottom: 2px solid #F3F4F6;
+              font-weight: 500;
               .col-asset { justify-self: start; }
               .col-risk { justify-self: end; }
             }
@@ -1038,7 +1043,7 @@
               align-items: center;
               justify-content: space-between;
               padding: 12px 16px;
-              border-bottom: 1px solid #F3F4F6;
+              border-bottom: 2px solid #F3F4F6;
 
               &:last-child {
                 border-bottom: none;
@@ -1052,8 +1057,8 @@
             }
             .asset-name { font-size: 13px; font-weight: 600; color: #111827; }
             .asset-ip { font-size: 11px; color: #6B7280; }
-            .badge { font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 9999px; border: 1px solid #FECACA; background: #FEE2E2; color: #DC2626; }
-
+            // .badge { font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 9999px; border: 1px solid #FECACA; background: #FEE2E2; color: #DC2626; }
+            .badge { font-size: 15px; font-weight: 700; padding: 4px 15px; border-radius: 9999px; margin-right: 10px; border: 2px solid #ffffff; background: #FFE2E0; color: #C6190D; }
             .list-footer {
               padding: 0.75rem;
               font-size: 0.75rem;
@@ -1062,7 +1067,7 @@
               align-items: center;
               justify-content: center;
               gap: 0.5rem;
-              border-top: 1px solid #F3F4F6;
+              border-top: 2px solid #F3F4F6;
               margin-top: auto; /* Push to bottom */
             }
           }
@@ -1078,6 +1083,7 @@
               align-items: center;
               justify-content: space-between;
               flex: 1;
+              padding-left: 10px;
               gap: 0.25rem; /* Even smaller gap for more room */
             }
 
@@ -1088,7 +1094,8 @@
                 font-size: 1rem;
                 font-weight: 600;
                 color: #111827;
-                margin-bottom: 0.75rem;
+                // margin-bottom: 0.75rem;
+                margin-bottom: 3.75rem;
                 text-align: left; /* Align with legend items */
               }
             }
@@ -1098,12 +1105,12 @@
               color: #6B7280;
               list-style: none;
               padding: 0;
-              margin: 0;
+              margin-top: -30px;
 
               li {
                 display: flex;
                 align-items: center;
-                margin-bottom: 0.5rem;
+                margin-bottom: 0.6rem;
 
                 &:last-child {
                   margin-bottom: 0;
@@ -1130,13 +1137,14 @@
               align-items: center;
               justify-content: center;
               flex-shrink: 0;
+              padding-right: 30px;
             }
 
             .donut-ring {
               border-radius: 50%;
-              width: 140px;
-              height: 140px;
-              border: 10px solid #DC2626;
+              width: 149px;
+              height: 149px;
+              border: 10px solid #C6190D;
               background: white;
             }
 
