@@ -315,17 +315,26 @@
           .diagram-title { font-size:28px; font-weight:700; color:#10b981; margin-bottom:60px; letter-spacing:-0.025em; }
           .nodes-container { position:relative; height:350px; width:100%; }
 
-          /* Unified network diagram container - groups all nodes and connections */
-          .network-diagram-container {
+          /* SVG Network Container - unified responsive behavior */
+          .svg-network-container {
             position: relative;
             width: 100%;
-            height: 100%;
+            height: 250px;
             transition: transform 0.3s ease-in-out;
+            overflow: visible;
           }
 
-          /* Move entire network diagram when sidebar is collapsed */
-          .network-diagram-container.sidebar-collapsed {
-            transform: translateX(-168px); /* Move entire diagram left by sidebar width difference */
+          /* Move entire SVG network diagram when sidebar is collapsed */
+          .svg-network-container.sidebar-collapsed {
+            // transform: translateX(-50px); /* Move diagram left slightly but keep first node fully visible */
+            transform: translateX(-30px); /* Move diagram left slightly but keep first node fully visible */
+          }
+
+          /* SVG responsive scaling */
+          .svg-network-container svg {
+            width: 100%;
+            height: 100%;
+            max-width: 1000px;
           }
           .node { position:absolute; display:flex; flex-direction:column; align-items:center; gap:12px; z-index:10; }
           .node-icon { position:relative; width:70px; height:70px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:#dbeafe; border:3px solid #3b82f6; box-shadow:0 4px 12px rgba(59,130,246,0.15); transition:all .2s ease; color:#3b82f6; }
@@ -344,94 +353,17 @@
           .node-label { font-size:15px; font-weight:600; color:#475569; white-space:nowrap; text-align:center; letter-spacing:-0.025em; margin-top: -10px; }
           .node-ip { font-size:11px; color:#94a3b8; font-weight:500; text-align:center; margin-top: -15px; }
 
-          /* Node positioning - matching the uploaded image layout */
-          .node-1 { top:80px; left:30px; }    /* Loremipsumm (leftmost) */
-          .node-2 { top:80px; left:200px; }   /* Loremipsu (center-left) */
-          .node-3 { top:80px; left:360px; }   /* Loremipsu (center-right) */
+          /* Node positioning - updated to match SVG coordinates */
+          .node-1 { top:100px; left:50px; }    /* Loremipsumm (leftmost) - matches SVG cx="80" */
+          .node-2 { top:100px; left:220px; }   /* Loremipsu (center-left) - matches SVG cx="250" */
+          .node-3 { top:100px; left:380px; }   /* Loremipsu (center-right) - matches SVG cx="410" */
 
-          .node-4 { top:20px; right:40px; }   /* Loremipsumdolorsit (top-right) - aligns with Y upper branch */
-          .node-5 { top:160px; right:40px; }  /* Loremipsumdolorsit002 (bottom-right) - aligns with Y lower branch */
-
-
-
-          /* Connection lines */
-          .connection { position:absolute; background:#cbd5e1; z-index:1; }
-          .connection-horizontal { height:1px; border-radius:2px; }
-          .connection-vertical { width:3px; border-radius:2px; }
-          .connection-branch { background:#cbd5e1; border-radius:2px; }
-
-          /* Straight connections between first 3 nodes */
-          .conn-1-2 { top:114px; left:120px; width:60px; }   /* Loremipsumm → Loremipsu (with spacing) */
-          .conn-2-3 { top:114px; left:280px; width:60px; }   /* Loremipsu → Loremipsu (with spacing) */
-
-          /* Y-shaped connector from node 3 to both target nodes - Clean Y Design */
-          .y-connector {
-            position: absolute;
-            top: 54px;
-            left: 425px;
-            width: 145px;
-            height: 122px;
-            z-index: 1;
-            transform: rotate(90deg);
-          }
-
-
-
-          /* Y-stem (main horizontal line from node 3) */
-          .y-stem {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 24px;
-            background-color: #cbd5e1;
-            border-radius: 1px;
-          }
-
-          /* Y-branch base styling */
-          .y-branch {
-            position: absolute;
-            top: 10px;
-            width: 2px;
-            height: 90px;
-            background-color: #cbd5e1;
-            border-radius: 1px;
-            transform-origin: bottom center;
-          }
-
-          /* Left branch (upper in rotated view) */
-          .y-left {
-            left: 50%;
-            transform:
-              translateX(-90%)
-              rotate(-30deg)
-              skewX(-10deg);
-          }
-
-          /* Right branch (lower in rotated view) */
-          .y-right {
-            right: 50%;
-            transform:
-              translateX(90%)
-              rotate(30deg)
-              skewX(10deg);
-          }
+          .node-4 { top:25px; right:40px; }    /* Loremipsumdolorsit (top-right) - matches SVG cy="50" */
+          .node-5 { top:175px; right:40px; }   /* Loremipsumdolorsit002 (bottom-right) - matches SVG cy="200" */
 
 
 
 
-
-
-
-
-          /* Arrows */
-          .arrow { position:absolute; width:0; height:0; z-index:5; }
-          .arrow-right { border-left:10px solid #cbd5e1; border-top:5px solid transparent; border-bottom:5px solid transparent; }
-          .arrow-1-2 { top:109px; left:170px; }   /* Arrow between Loremipsumm → Loremipsu */
-          .arrow-2-3 { top:109px; left:330px; }   /* Arrow between Loremipsu → Loremipsu */
-          .arrow-to-4 { top:49px; right:130px; }   /* Arrow to top-right node */
-          .arrow-to-5 { top:189px; right:130px; }  /* Arrow to bottom-right node */
 
 
 
