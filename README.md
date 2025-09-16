@@ -5,7 +5,7 @@ A modern, responsive Angular dashboard application built with Angular 20, featur
 ## 🚀 Features
 
 ### Core Functionality
-- **Interactive Network Diagram**: Custom SVG-based network visualization with 5 interconnected nodes
+- **Interactive Network Diagram**: Custom network visualization with 5 interconnected nodes (CSS-based connectors)
 - **Server Management**: Three server cards (Lorem P, S, T) with detailed information display
 - **Responsive Layout**: Adaptive design that works seamlessly across desktop, tablet, and mobile devices
 - **Collapsible Sidebar**: Space-efficient navigation with smooth animations
@@ -173,8 +173,8 @@ npm test -- --code-coverage
 
 ### Network Diagram
 - **5 Interactive Nodes**: Clickable network elements with hover effects
-- **Connection Lines**: SVG-based connections between nodes
-- **Y-Connector**: Special junction element for complex routing
+- **Connection Lines**: CSS-based connections between nodes for optimal performance
+- **Y-Connector**: Pure CSS implementation with positioned div elements and transforms
 - **Tooltip System**: Hover information for each network element
 
 ## 🔧 Configuration

@@ -47,8 +47,15 @@
     border-radius: 10px;
     background: #F3F4F6; /* gray-100 */
     box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    cursor: pointer;
 
-    img { width: 20px; height: 20px; display: block; }
+    img {
+      width: 32px;
+      height: 32px;
+      display: block;
+      object-fit: contain; /* Ensures proper scaling for different image types */
+      border-radius: 4px; /* Slight rounding for logo */
+    }
   }
 
 

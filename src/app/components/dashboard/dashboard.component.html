@@ -16,13 +16,14 @@
               Lorem ipsum dolor sit amet consectetur. Aenean sodales pellentesque gravida nibh et magna faucibus. Duis commodo ut metus amet egestas habitant viverra. Quisque morbi senectus facilisis non diam leo nulla sem pellentesque sit in vel sed cursus mattis sit fringilla vestibulum.
             </p>
           </div>
-          <div class="divider"></div>
+          <!-- <div class="divider"></div> -->
           <div class="card-section">
             <h3 class="section-title text-green">Extra</h3>
             <p class="muted">
               Lorem ipsum dolor sit amet consectetur. Tempus a id adipiscing egestas egestas tellus dis pretium tempus. Justo nisi mi lorem lectus id ornare. Rhoncus in egestas in amet porttitor pellentesque sit. Amet gravida integer velit felis. Eu consectetur interdum auctor sed aliquam. Eu pulvinar accumsan sed id. Duis a aliquam eu quisque commodo lectus. Lectus ipsum velit purus viverra vulputate viverra in nunc nullam. Euismod rhoncus mauris urna orci gravida sagittis netus. Atmo mus iu velit etiam. Interdum habitant congue massa in etiam sit. Commodo nibh viverra lobortis augue lorem quam lorem suspendisse.
             </p>
           </div>
+          <div class="divider"></div>
           <div class="kv-list">
             <div class="kv-item"><span class="kv-key">Lorem Ipsum Dolor</span><span class="kv-val">10/19/2017</span></div>
             <div class="kv-item"><span class="kv-key">Lorem Ipsum Dolor</span><span class="kv-val">Ut</span></div>
@@ -31,6 +32,7 @@
             <div class="kv-item"><span class="kv-key">Lorem Ipsum Dolor</span><span class="kv-val">Sit</span></div>
             <div class="kv-item"><span class="kv-key">Lorem Ipsum Dolor</span><span class="kv-val">Lorem Ipsum Dolor</span></div>
             <div class="kv-item"><span class="kv-key">Lorem Ipsum Dolor</span><span class="kv-val">Lorem Ipsum Dolor</span></div>
+            <div class="divider"></div>
             <div class="kv-item full"><span class="kv-key">Lorem Ipsum Dolor Sit</span></div>
           </div>
 
@@ -156,299 +158,298 @@
             <div class="card graph-card">
               <div class="diagram-container">
                 <div class="nodes-container">
-                  <!-- Node 1 -->
-                  <div class="node node-1" (mouseenter)="showNodeTooltip = true" (mouseleave)="showNodeTooltip = false">
-                    <div class="node-icon-svg">
-                      <svg width="64" height="64" viewBox="0 0 59 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- SVG Network Diagram - matches uploaded image 100% perfectly -->
+                  <div class="svg-network-container" [class.sidebar-collapsed]="sidebarCollapsed()">
+                    <svg width="1000" height="250" viewBox="0 0 1000 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <!-- Connection Arrows with spacing around nodes -->
+                      <!-- Arrow from Node 1 to Node 2 (shortened to avoid node overlap) -->
+                      <g transform="translate(125, 139) scale(1.0)">
+                        <path d="M59 2.92004L55.25 0.754978L55.25 5.08511L59 2.92004ZM0.5 3.29504L55.625 3.29504L55.625 2.54504L0.5 2.54504L0.5 3.29504Z" fill="#858D9D"/>
+                      </g>
+
+                      <!-- Arrow from Node 2 to Node 3 (shortened to avoid node overlap) -->
+                      <g transform="translate(290, 139) scale(1.0)">
+                        <path d="M59 2.92004L55.25 0.754978L55.25 5.08511L59 2.92004ZM0.5 3.29504L55.625 3.29504L55.625 2.54504L0.5 2.54504L0.5 3.29504Z" fill="#858D9D"/>
+                      </g>
+
+                      <!-- Y-connector using Y-connector.svg asset -->
+                      <g transform="translate(450, 70) scale(1.3)">
+                        <!-- Upper branch -->
+                        <path d="M208 2.56104L204.25 4.7261L204.25 0.395972L208 2.56104ZM80.8318 55.936L-3.57102e-06 55.936L-3.52084e-06 55.186L80.8318 55.186L80.8318 55.936ZM204.625 2.93604L144.795 2.93603L144.795 2.18603L204.625 2.18604L204.625 2.93604ZM127.503 11.2585L98.7098 47.3314L98.1236 46.8635L126.917 10.7907L127.503 11.2585ZM144.795 2.93603C138.066 2.93603 131.702 5.99895 127.503 11.2585L126.917 10.7907C131.258 5.35277 137.837 2.18603 144.795 2.18603L144.795 2.93603ZM80.8318 55.186C87.5615 55.186 93.9254 52.1231 98.1236 46.8635L98.7098 47.3314C94.3692 52.7693 87.7896 55.936 80.8318 55.936L80.8318 55.186Z" fill="#858D9D"/>
+                        <!-- Lower branch -->
+                        <path d="M208 107.279L204.25 105.114L204.25 109.444L208 107.279ZM80.9605 54.9038L-3.50411e-06 54.9038L-3.45394e-06 55.6538L80.9605 55.6538L80.9605 54.9038ZM204.625 106.904L144.667 106.904L144.667 107.654L204.625 107.654L204.625 106.904ZM127.504 98.7416L98.7049 63.3427L98.1231 63.816L126.922 99.2149L127.504 98.7416ZM144.667 106.904C138.009 106.904 131.705 103.906 127.504 98.7416L126.922 99.2149C131.266 104.554 137.783 107.654 144.667 107.654L144.667 106.904ZM80.9605 55.6538C87.618 55.6538 93.9216 58.6517 98.1231 63.816L98.7049 63.3427C94.361 58.0033 87.8437 54.9038 80.9605 54.9038L80.9605 55.6538Z" fill="#858D9D"/>
+                      </g>
+
+                      <!-- Node 1: Loremipsumm (Purple with user icon) - centered on connection line -->
+                      <g id="node1" transform="translate(40, 94) scale(1.35)">
+                        <!-- Embedded shield-purple.svg content, scaled up -->
                         <circle cx="26.5" cy="33.37" r="26.46" fill="#FFF1F0"/>
                         <path d="M16.1667 33.4599C16.1667 34.8965 16.7374 36.2742 17.7533 37.29C18.7691 38.3059 20.1468 38.8765 21.5834 38.8765C23.5851 38.9511 25.4992 39.7167 27.0001 41.0432C28.501 39.7167 30.4151 38.9511 32.4167 38.8765C33.8533 38.8765 35.2311 38.3059 36.2469 37.29C37.2627 36.2742 37.8334 34.8965 37.8334 33.4599V28.0432H32.4167C30.4151 28.1178 28.501 28.8834 27.0001 30.2099C25.4992 28.8834 23.5851 28.1178 21.5834 28.0432H16.1667V33.4599Z" stroke="#E6372B" stroke-width="1.625" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M20.5001 32.3765C22.1251 32.3765 23.7501 32.9182 23.7501 34.5432C21.5834 34.5432 20.5001 34.5432 20.5001 32.3765Z" stroke="#E6372B" stroke-width="1.625" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M33.5001 32.3765C31.8751 32.3765 30.2501 32.9182 30.2501 34.5432C32.4167 34.5432 33.5001 34.5432 33.5001 32.3765Z" stroke="#E6372B" stroke-width="1.625" stroke-linecap="round" stroke-linejoin="round"/>
                         <circle cx="47.0398" cy="11.9102" r="10.5" fill="#7A44FF" stroke="#FAFAFA"/>
-                        <mask id="mask0_1_377" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="41" y="4" width="14" height="14">
-                          <rect x="41.04" y="4.91003" width="13" height="13" fill="#D9D9D9"/>
-                        </mask>
-                        <g mask="url(#mask0_1_377)">
-                          <path d="M41.5815 15.7436V14.2269C41.5815 13.92 41.6605 13.6378 41.8185 13.3805C41.9765 13.1233 42.1864 12.9269 42.4482 12.7915C43.0079 12.5116 43.5767 12.3017 44.1545 12.1618C44.7322 12.0219 45.319 11.9519 45.9149 11.9519C46.5107 11.9519 47.0975 12.0219 47.6753 12.1618C48.2531 12.3017 48.8218 12.5116 49.3815 12.7915C49.6433 12.9269 49.8532 13.1233 50.0112 13.3805C50.1692 13.6378 50.2482 13.92 50.2482 14.2269V15.7436H41.5815ZM51.3315 15.7436V14.1186C51.3315 13.7213 51.221 13.3399 50.9998 12.9743C50.7786 12.6087 50.4649 12.295 50.0586 12.0332C50.519 12.0873 50.9524 12.1799 51.3586 12.3108C51.7649 12.4417 52.144 12.6019 52.4961 12.7915C52.8211 12.972 53.0694 13.1729 53.2409 13.3941C53.4124 13.6153 53.4982 13.8568 53.4982 14.1186V15.7436H51.3315ZM45.9149 11.4102C45.319 11.4102 44.809 11.1981 44.3847 10.7738C43.9604 10.3495 43.7482 9.8394 43.7482 9.24357C43.7482 8.64774 43.9604 8.13767 44.3847 7.71336C44.809 7.28906 45.319 7.0769 45.9149 7.0769C46.5107 7.0769 47.0208 7.28906 47.4451 7.71336C47.8694 8.13767 48.0815 8.64774 48.0815 9.24357C48.0815 9.8394 47.8694 10.3495 47.4451 10.7738C47.0208 11.1981 46.5107 11.4102 45.9149 11.4102ZM51.3315 9.24357C51.3315 9.8394 51.1194 10.3495 50.6951 10.7738C50.2708 11.1981 49.7607 11.4102 49.1649 11.4102C49.0656 11.4102 48.9392 11.399 48.7857 11.3764C48.6322 11.3538 48.5058 11.329 48.4065 11.3019C48.6503 11.013 48.8376 10.6925 48.9685 10.3404C49.0994 9.98836 49.1649 9.62274 49.1649 9.24357C49.1649 8.8644 49.0994 8.49878 48.9685 8.1467C48.8376 7.79461 48.6503 7.47413 48.4065 7.18524C48.5329 7.1401 48.6593 7.11076 48.7857 7.09722C48.9121 7.08368 49.0385 7.0769 49.1649 7.0769C49.7607 7.0769 50.2708 7.28906 50.6951 7.71336C51.1194 8.13767 51.3315 8.64774 51.3315 9.24357ZM42.6649 14.6602H49.1649V14.2269C49.1649 14.1276 49.14 14.0373 49.0904 13.9561C49.0407 13.8748 48.9753 13.8116 48.894 13.7665C48.4065 13.5227 47.9145 13.3399 47.418 13.2181C46.9215 13.0962 46.4204 13.0352 45.9149 13.0352C45.4093 13.0352 44.9083 13.0962 44.4118 13.2181C43.9152 13.3399 43.4232 13.5227 42.9357 13.7665C42.8545 13.8116 42.789 13.8748 42.7394 13.9561C42.6897 14.0373 42.6649 14.1276 42.6649 14.2269V14.6602ZM45.9149 10.3269C46.2128 10.3269 46.4678 10.2208 46.68 10.0087C46.8921 9.79652 46.9982 9.54149 46.9982 9.24357C46.9982 8.94565 46.8921 8.69062 46.68 8.47847C46.4678 8.26631 46.2128 8.16024 45.9149 8.16024C45.617 8.16024 45.3619 8.26631 45.1498 8.47847C44.9376 8.69062 44.8315 8.94565 44.8315 9.24357C44.8315 9.54149 44.9376 9.79652 45.1498 10.0087C45.3619 10.2208 45.617 10.3269 45.9149 10.3269Z" fill="white"/>
-                        </g>
-                      </svg>
-                    </div>
-                    <div class="node-label">Loremipsumm</div>
+                        <path d="M41.5815 15.7436V14.2269C41.5815 13.92 41.6605 13.6378 41.8185 13.3805C41.9765 13.1233 42.1864 12.9269 42.4482 12.7915C43.0079 12.5116 43.5767 12.3017 44.1545 12.1618C44.7322 12.0219 45.319 11.9519 45.9149 11.9519C46.5107 11.9519 47.0975 12.0219 47.6753 12.1618C48.2531 12.3017 48.8218 12.5116 49.3815 12.7915C49.6433 12.9269 49.8532 13.1233 50.0112 13.3805C50.1692 13.6378 50.2482 13.92 50.2482 14.2269V15.7436H41.5815ZM51.3315 15.7436V14.1186C51.3315 13.7213 51.221 13.3399 50.9998 12.9743C50.7786 12.6087 50.4649 12.295 50.0586 12.0332C50.519 12.0873 50.9524 12.1799 51.3586 12.3108C51.7649 12.4417 52.144 12.6019 52.4961 12.7915C52.8211 12.972 53.0694 13.1729 53.2409 13.3941C53.4124 13.6153 53.4982 13.8568 53.4982 14.1186V15.7436H51.3315ZM45.9149 11.4102C45.319 11.4102 44.809 11.1981 44.3847 10.7738C43.9604 10.3495 43.7482 9.8394 43.7482 9.24357C43.7482 8.64774 43.9604 8.13767 44.3847 7.71336C44.809 7.28906 45.319 7.0769 45.9149 7.0769C46.5107 7.0769 47.0208 7.28906 47.4451 7.71336C47.8694 8.13767 48.0815 8.64774 48.0815 9.24357C48.0815 9.8394 47.8694 10.3495 47.4451 10.7738C47.0208 11.1981 46.5107 11.4102 45.9149 11.4102ZM51.3315 9.24357C51.3315 9.8394 51.1194 10.3495 50.6951 10.7738C50.2708 11.1981 49.7607 11.4102 49.1649 11.4102C49.0656 11.4102 48.9392 11.399 48.7857 11.3764C48.6322 11.3538 48.5058 11.329 48.4065 11.3019C48.6503 11.013 48.8376 10.6925 48.9685 10.3404C49.0994 9.98836 49.1649 9.62274 49.1649 9.24357C49.1649 8.8644 49.0994 8.49878 48.9685 8.1467C48.8376 7.79461 48.6503 7.47413 48.4065 7.18524C48.5329 7.1401 48.6593 7.11076 48.7857 7.09722C48.9121 7.08368 49.0385 7.0769 49.1649 7.0769C49.7607 7.0769 50.2708 7.28906 50.6951 7.71336C51.1194 8.13767 51.3315 8.64774 51.3315 9.24357ZM42.6649 14.6602H49.1649V14.2269C49.1649 14.1276 49.14 14.0373 49.0904 13.9561C49.0407 13.8748 48.9753 13.8116 48.894 13.7665C48.4065 13.5227 47.9145 13.3399 47.418 13.2181C46.9215 13.0962 46.4204 13.0352 45.9149 13.0352C45.4093 13.0352 44.9083 13.0962 44.4118 13.2181C43.9152 13.3399 43.4232 13.5227 42.9357 13.7665C42.8545 13.8116 42.789 13.8748 42.7394 13.9561C42.6897 14.0373 42.6649 14.1276 42.6649 14.2269V14.6602ZM45.9149 10.3269C46.2128 10.3269 46.4678 10.2208 46.68 10.0087C46.8921 9.79652 46.9982 9.54149 46.9982 9.24357C46.9982 8.94565 46.8921 8.69062 46.68 8.47847C46.4678 8.26631 46.2128 8.16024 45.9149 8.16024C45.617 8.16024 45.3619 8.26631 45.1498 8.47847C44.9376 8.69062 44.8315 8.94565 44.8315 9.24357C44.8315 9.54149 44.9376 9.79652 45.1498 10.0087C45.3619 10.2208 45.617 10.3269 45.9149 10.3269Z" fill="white"/>
+                      </g>
 
-                    <!-- Hover Card with Backdrop -->
-                    <div class="tooltip-backdrop" *ngIf="showNodeTooltip">
-                      <div class="node-tooltip">
-                        <div class="tooltip-header">
-                          <h4>Lorem Ipsum Dolor Sit</h4>
-                        </div>
-                        <div class="tooltip-content">
-                          <div class="version-grid">
-                            <div class="version-item red">1.2.3.4</div>
-                            <div class="version-item red">1.2.3.4</div>
-                            <div class="version-item red">1.2.3.4</div>
-                            <div class="version-item red">1.2.3.4</div>
-                            <div class="version-item red">1.2.3.4</div>
-                            <div class="version-item red">1.2.3.4</div>
-                          </div>
-                          <div class="lorem-section">
-                            <span class="lorem-label">Lorem:  1.2.3.4</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Node 2 -->
-                  <div class="node node-2" (mouseenter)="showNode2Tooltip = true" (mouseleave)="showNode2Tooltip = false">
-                    <div class="node-icon-svg">
-                      <svg width="64" height="64" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <!-- Node 2: Loremipsu (Blue server icon) - centered on connection line -->
+                      <g id="node2" transform="translate(200, 99) scale(2.0)">
+                        <!-- Embedded shield-blue.svg content, scaled up -->
                         <circle cx="19.8448" cy="19.8448" r="19.845" fill="#D7EAFF"/>
-                        <g clip-path="url(#clip0_26_588)">
-                          <path d="M15.2036 15.1255H15.2118M15.2036 24.9693H15.2118M13.563 11.8443H26.688C27.5941 11.8443 28.3286 12.5788 28.3286 13.4849V16.7661C28.3286 17.6722 27.5941 18.4068 26.688 18.4068H13.563C12.6569 18.4068 11.9224 17.6722 11.9224 16.7661V13.4849C11.9224 12.5788 12.6569 11.8443 13.563 11.8443ZM13.563 21.688H26.688C27.5941 21.688 28.3286 22.4225 28.3286 23.3286V26.6099C28.3286 27.516 27.5941 28.2505 26.688 28.2505H13.563C12.6569 28.2505 11.9224 27.516 11.9224 26.6099V23.3286C11.9224 22.4225 12.6569 21.688 13.563 21.688Z" stroke="#1873DE" stroke-width="1.64062" stroke-linecap="round" stroke-linejoin="round"/>
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_26_588">
-                            <rect width="19.6875" height="19.6875" fill="white" transform="translate(10.282 10.2039)"/>
-                          </clipPath>
-                        </defs>
-                      </svg>
-                    </div>
-                    <div class="node-label">Loremipsu</div>
+                        <path d="M15.2036 15.1255H15.2118M15.2036 24.9693H15.2118M13.563 11.8443H26.688C27.5941 11.8443 28.3286 12.5788 28.3286 13.4849V16.7661C28.3286 17.6722 27.5941 18.4068 26.688 18.4068H13.563C12.6569 18.4068 11.9224 17.6722 11.9224 16.7661V13.4849C11.9224 12.5788 12.6569 11.8443 13.563 11.8443ZM13.563 21.688H26.688C27.5941 21.688 28.3286 22.4225 28.3286 23.3286V26.6099C28.3286 27.516 27.5941 28.2505 26.688 28.2505H13.563C12.6569 28.2505 11.9224 27.516 11.9224 26.6099V23.3286C11.9224 22.4225 12.6569 21.688 13.563 21.688Z" stroke="#1873DE" stroke-width="1.64062" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
 
-                    <!-- Hover Card for Node 2 -->
-                    <div class="tooltip-backdrop" *ngIf="showNode2Tooltip">
-                      <div class="node-tooltip node-2-tooltip">
-                        <div class="tooltip-header">
-                          <div class="shield-icon-header">
-                            <svg width="24" height="24" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="shield-icon-inline">
-                              <circle cx="19.8448" cy="19.8448" r="19.845" fill="#D7EAFF"/>
-                              <g clip-path="url(#clip0_26_588)">
-                                <path d="M15.2036 15.1255H15.2118M15.2036 24.9693H15.2118M13.563 11.8443H26.688C27.5941 11.8443 28.3286 12.5788 28.3286 13.4849V16.7661C28.3286 17.6722 27.5941 18.4068 26.688 18.4068H13.563C12.6569 18.4068 11.9224 17.6722 11.9224 16.7661V13.4849C11.9224 12.5788 12.6569 11.8443 13.563 11.8443ZM13.563 21.688H26.688C27.5941 21.688 28.3286 22.4225 28.3286 23.3286V26.6099C28.3286 27.516 27.5941 28.2505 26.688 28.2505H13.563C12.6569 28.2505 11.9224 27.516 11.9224 26.6099V23.3286C11.9224 22.4225 12.6569 21.688 13.563 21.688Z" stroke="#1873DE" stroke-width="1.64062" stroke-linecap="round" stroke-linejoin="round"/>
-                              </g>
-                              <defs>
-                                <clipPath id="clip0_26_588">
-                                  <rect width="19.6875" height="19.6875" fill="white" transform="translate(10.282 10.2039)"/>
-                                </clipPath>
-                              </defs>
-                            </svg>
-                            <span class="node-title">Loremipsu</span>
-                          </div>
-                        </div>
-                        <div class="tooltip-content">
-                          <div class="info-section">
-                            <div class="info-row">
-                              <span class="info-icon">📄</span>
-                              <span class="info-text">Lorem: Loremipsum Loremipsum</span>
-                              <span class="info-value blue">1.2.3.4</span>
-                            </div>
-                            <div class="version-row">
-                              <span class="version-numbers blue">1.2.3.4</span>
-                              <span class="version-text">Loremipsum</span>
-                              <span class="version-numbers blue">1.2.3.4</span>
-                              <span class="version-numbers blue">1.2.3.4</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Node 3 -->
-                  <div class="node node-3" (mouseenter)="showNode3Tooltip = true" (mouseleave)="showNode3Tooltip = false">
-                    <div class="node-icon-svg">
-                      <svg width="64" height="64" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <!-- Node 3: Loremipsu (Blue server icon) - centered on connection line -->
+                      <g id="node3" transform="translate(360, 99) scale(2.0)">
+                        <!-- Embedded shield-blue.svg content, scaled up -->
                         <circle cx="19.8448" cy="19.8448" r="19.845" fill="#D7EAFF"/>
-                        <g clip-path="url(#clip0_26_588_node3)">
-                          <path d="M15.2036 15.1255H15.2118M15.2036 24.9693H15.2118M13.563 11.8443H26.688C27.5941 11.8443 28.3286 12.5788 28.3286 13.4849V16.7661C28.3286 17.6722 27.5941 18.4068 26.688 18.4068H13.563C12.6569 18.4068 11.9224 17.6722 11.9224 16.7661V13.4849C11.9224 12.5788 12.6569 11.8443 13.563 11.8443ZM13.563 21.688H26.688C27.5941 21.688 28.3286 22.4225 28.3286 23.3286V26.6099C28.3286 27.516 27.5941 28.2505 26.688 28.2505H13.563C12.6569 28.2505 11.9224 27.516 11.9224 26.6099V23.3286C11.9224 22.4225 12.6569 21.688 13.563 21.688Z" stroke="#1873DE" stroke-width="1.64062" stroke-linecap="round" stroke-linejoin="round"/>
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_26_588_node3">
-                            <rect width="19.6875" height="19.6875" fill="white" transform="translate(10.282 10.2039)"/>
-                          </clipPath>
-                        </defs>
-                      </svg>
-                    </div>
-                    <div class="node-label">Loremipsu</div>
+                        <path d="M15.2036 15.1255H15.2118M15.2036 24.9693H15.2118M13.563 11.8443H26.688C27.5941 11.8443 28.3286 12.5788 28.3286 13.4849V16.7661C28.3286 17.6722 27.5941 18.4068 26.688 18.4068H13.563C12.6569 18.4068 11.9224 17.6722 11.9224 16.7661V13.4849C11.9224 12.5788 12.6569 11.8443 13.563 11.8443ZM13.563 21.688H26.688C27.5941 21.688 28.3286 22.4225 28.3286 23.3286V26.6099C28.3286 27.516 27.5941 28.2505 26.688 28.2505H13.563C12.6569 28.2505 11.9224 27.516 11.9224 26.6099V23.3286C11.9224 22.4225 12.6569 21.688 13.563 21.688Z" stroke="#1873DE" stroke-width="1.64062" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
 
-                    <!-- Hover Card for Node 3 -->
-                    <div class="tooltip-backdrop" *ngIf="showNode3Tooltip">
-                      <div class="node-tooltip node-3-tooltip">
-                        <div class="tooltip-header">
-                          <div class="shield-icon-header">
-                            <svg width="24" height="24" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="shield-icon-inline">
-                              <circle cx="19.8448" cy="19.8448" r="19.845" fill="#D7EAFF"/>
-                              <g clip-path="url(#clip0_26_588)">
-                                <path d="M15.2036 15.1255H15.2118M15.2036 24.9693H15.2118M13.563 11.8443H26.688C27.5941 11.8443 28.3286 12.5788 28.3286 13.4849V16.7661C28.3286 17.6722 27.5941 18.4068 26.688 18.4068H13.563C12.6569 18.4068 11.9224 17.6722 11.9224 16.7661V13.4849C11.9224 12.5788 12.6569 11.8443 13.563 11.8443ZM13.563 21.688H26.688C27.5941 21.688 28.3286 22.4225 28.3286 23.3286V26.6099C28.3286 27.516 27.5941 28.2505 26.688 28.2505H13.563C12.6569 28.2505 11.9224 27.516 11.9224 26.6099V23.3286C11.9224 22.4225 12.6569 21.688 13.563 21.688Z" stroke="#1873DE" stroke-width="1.64062" stroke-linecap="round" stroke-linejoin="round"/>
-                              </g>
-                              <defs>
-                                <clipPath id="clip0_26_588_node3">
-                                  <rect width="19.6875" height="19.6875" fill="white" transform="translate(10.282 10.2039)"/>
-                                </clipPath>
-                              </defs>
-                            </svg>
-                            <span class="node-title">Loremipsu</span>
-                          </div>
-                        </div>
-                        <div class="tooltip-content">
-                          <div class="info-section">
-                            <div class="info-row">
-                              <span class="info-icon">📄</span>
-                              <span class="info-text">Lorem: Loremipsum Loremipsum</span>
-                              <span class="info-value blue">1.2.3.4</span>
-                            </div>
-                            <div class="version-row">
-                              <span class="version-numbers blue">1.2.3.4</span>
-                              <span class="version-text">Loremipsum</span>
-                              <span class="version-numbers blue">1.2.3.4</span>
-                              <span class="version-numbers blue">1.2.3.4</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-
-                  <!-- Node 4 -->
-                  <div class="node node-4" (mouseenter)="showNode4Tooltip = true" (mouseleave)="showNode4Tooltip = false">
-                    <div class="node-icon-svg">
-                      <svg width="64" height="64" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <!-- Node 4: Loremipsumdolorsit (Blue server with red shield) - embedded shield-blue-red.svg content -->
+                      <g id="node4" transform="translate(740, 10) scale(1.35)">
+                        <!-- Embedded shield-blue-red.svg content, scaled up -->
                         <circle cx="26.5" cy="31.9101" r="26.46" fill="#D7EAFF"/>
                         <path d="M19.5615 26.4298H19.5725M19.5615 37.2936H19.5725M17.374 22.8086H34.874C36.0821 22.8086 37.0615 23.6192 37.0615 24.6192V28.2405C37.0615 29.2405 36.0821 30.0511 34.874 30.0511H17.374C16.1659 30.0511 15.1865 29.2405 15.1865 28.2405V24.6192C15.1865 23.6192 16.1659 22.8086 17.374 22.8086ZM17.374 33.6724H34.874C36.0821 33.6724 37.0615 34.483 37.0615 35.483V39.1042C37.0615 40.1042 36.0821 40.9149 34.874 40.9149H17.374C16.1659 40.9149 15.1865 40.1042 15.1865 39.1042V35.483C15.1865 34.483 16.1659 33.6724 17.374 33.6724Z" stroke="#1873DE" stroke-width="1.81062" stroke-linecap="round" stroke-linejoin="round"/>
                         <rect x="37" y="-0.00012207" width="22" height="22" rx="11" fill="#E6372B"/>
                         <path d="M50.0623 9.43414L46.9373 12.8196M46.9373 9.43414L50.0623 12.8196M53.4998 11.8039C53.4998 15.1894 51.3123 16.8821 48.7123 17.8638C48.5761 17.9138 48.4282 17.9114 48.2935 17.8571C45.6873 16.8821 43.4998 15.1894 43.4998 11.8039V7.06435C43.4998 6.88478 43.5656 6.71256 43.6828 6.58558C43.8 6.4586 43.959 6.38727 44.1248 6.38727C45.3748 6.38727 46.9373 5.57477 48.0248 4.5456C48.1572 4.42305 48.3256 4.35571 48.4998 4.35571C48.6739 4.35571 48.8423 4.42305 48.9748 4.5456C50.0685 5.58154 51.6248 6.38727 52.8748 6.38727C53.0405 6.38727 53.1995 6.4586 53.3167 6.58558C53.4339 6.71256 53.4998 6.88478 53.4998 7.06435V11.8039Z" stroke="#FFF8F7" stroke-width="0.739568" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                    <div class="node-label">Loremipsumdolorsit</div>
-                    <div class="node-ip">192.168.1.1</div>
+                      </g>
 
-                    <!-- Hover Card for Node 4 -->
-                    <div class="tooltip-backdrop" *ngIf="showNode4Tooltip">
-                      <div class="node-tooltip node-4-tooltip">
-                        <div class="tooltip-header">
-                          <div class="shield-icon-header">
-                            <svg width="32" height="32" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg" class="shield-icon-inline">
-                              <circle cx="26.5" cy="31.9101" r="26.46" fill="#D7EAFF"/>
-                              <path d="M19.5615 26.4298H19.5725M19.5615 37.2936H19.5725M17.374 22.8086H34.874C36.0821 22.8086 37.0615 23.6192 37.0615 24.6192V28.2405C37.0615 29.2405 36.0821 30.0511 34.874 30.0511H17.374C16.1659 30.0511 15.1865 29.2405 15.1865 28.2405V24.6192C15.1865 23.6192 16.1659 22.8086 17.374 22.8086ZM17.374 33.6724H34.874C36.0821 33.6724 37.0615 34.483 37.0615 35.483V39.1042C37.0615 40.1042 36.0821 40.9149 34.874 40.9149H17.374C16.1659 40.9149 15.1865 40.1042 15.1865 39.1042V35.483C15.1865 34.483 16.1659 33.6724 17.374 33.6724Z" stroke="#1873DE" stroke-width="1.81062" stroke-linecap="round" stroke-linejoin="round"/>
-                              <rect x="37" y="-0.00012207" width="22" height="22" rx="11" fill="#E6372B"/>
-                              <path d="M50.0623 9.43414L46.9373 12.8196M46.9373 9.43414L50.0623 12.8196M53.4998 11.8039C53.4998 15.1894 51.3123 16.8821 48.7123 17.8638C48.5761 17.9138 48.4282 17.9114 48.2935 17.8571C45.6873 16.8821 43.4998 15.1894 43.4998 11.8039V7.06435C43.4998 6.88478 43.5656 6.71256 43.6828 6.58558C43.8 6.4586 43.959 6.38727 44.1248 6.38727C45.3748 6.38727 46.9373 5.57477 48.0248 4.5456C48.1572 4.42305 48.3256 4.35571 48.4998 4.35571C48.6739 4.35571 48.8423 4.42305 48.9748 4.5456C50.0685 5.58154 51.6248 6.38727 52.8748 6.38727C53.0405 6.38727 53.1995 6.4586 53.3167 6.58558C53.4339 6.71256 53.4998 6.88478 53.4998 7.06435V11.8039Z" stroke="#FFF8F7" stroke-width="0.739568" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <div class="node-info">
-                              <span class="node-title">Loremipsumdolorsit001</span>
-                              <div class="node-ip-header">192.168.1.2</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tooltip-content">
-                          <div class="info-section">
-                            <div class="info-row">
-                              <span class="info-icon">📄</span>
-                              <span class="info-text">Lorem:</span>
-                              <span class="info-value highlight">Lorem "Ipsum"</span>
-                            </div>
-                            <div class="info-row">
-                              <span class="info-text">Loremipsum</span>
-                              <span class="info-value blue">Lorem 1234,5678</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Node 5 -->
-                  <div class="node node-5" (mouseenter)="showNode5Tooltip = true" (mouseleave)="showNode5Tooltip = false">
-                    <div class="node-icon-svg">
-                      <svg width="64" height="64" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <!-- Node 5: Loremipsumdolorsit002 (Blue server with red shield) - embedded shield-blue-red.svg content -->
+                      <g id="node5" transform="translate(740, 160) scale(1.35)">
+                        <!-- Embedded shield-blue-red.svg content, scaled up -->
                         <circle cx="26.5" cy="31.9101" r="26.46" fill="#D7EAFF"/>
                         <path d="M19.5615 26.4298H19.5725M19.5615 37.2936H19.5725M17.374 22.8086H34.874C36.0821 22.8086 37.0615 23.6192 37.0615 24.6192V28.2405C37.0615 29.2405 36.0821 30.0511 34.874 30.0511H17.374C16.1659 30.0511 15.1865 29.2405 15.1865 28.2405V24.6192C15.1865 23.6192 16.1659 22.8086 17.374 22.8086ZM17.374 33.6724H34.874C36.0821 33.6724 37.0615 34.483 37.0615 35.483V39.1042C37.0615 40.1042 36.0821 40.9149 34.874 40.9149H17.374C16.1659 40.9149 15.1865 40.1042 15.1865 39.1042V35.483C15.1865 34.483 16.1659 33.6724 17.374 33.6724Z" stroke="#1873DE" stroke-width="1.81062" stroke-linecap="round" stroke-linejoin="round"/>
                         <rect x="37" y="-0.00012207" width="22" height="22" rx="11" fill="#E6372B"/>
                         <path d="M50.0623 9.43414L46.9373 12.8196M46.9373 9.43414L50.0623 12.8196M53.4998 11.8039C53.4998 15.1894 51.3123 16.8821 48.7123 17.8638C48.5761 17.9138 48.4282 17.9114 48.2935 17.8571C45.6873 16.8821 43.4998 15.1894 43.4998 11.8039V7.06435C43.4998 6.88478 43.5656 6.71256 43.6828 6.58558C43.8 6.4586 43.959 6.38727 44.1248 6.38727C45.3748 6.38727 46.9373 5.57477 48.0248 4.5456C48.1572 4.42305 48.3256 4.35571 48.4998 4.35571C48.6739 4.35571 48.8423 4.42305 48.9748 4.5456C50.0685 5.58154 51.6248 6.38727 52.8748 6.38727C53.0405 6.38727 53.1995 6.4586 53.3167 6.58558C53.4339 6.71256 53.4998 6.88478 53.4998 7.06435V11.8039Z" stroke="#FFF8F7" stroke-width="0.739568" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                    <div class="node-label">Loremipsumdolorsit002</div>
-                    <div class="node-ip">192.168.1.2</div>
+                      </g>
 
-                    <!-- Hover Card for Node 5 -->
-                    <div class="tooltip-backdrop" *ngIf="showNode5Tooltip">
-                      <div class="node-tooltip node-5-tooltip">
-                        <div class="tooltip-header">
-                          <div class="shield-icon-header">
-                            <svg width="32" height="32" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg" class="shield-icon-inline">
-                              <circle cx="26.5" cy="31.9101" r="26.46" fill="#D7EAFF"/>
-                              <path d="M19.5615 26.4298H19.5725M19.5615 37.2936H19.5725M17.374 22.8086H34.874C36.0821 22.8086 37.0615 23.6192 37.0615 24.6192V28.2405C37.0615 29.2405 36.0821 30.0511 34.874 30.0511H17.374C16.1659 30.0511 15.1865 29.2405 15.1865 28.2405V24.6192C15.1865 23.6192 16.1659 22.8086 17.374 22.8086ZM17.374 33.6724H34.874C36.0821 33.6724 37.0615 34.483 37.0615 35.483V39.1042C37.0615 40.1042 36.0821 40.9149 34.874 40.9149H17.374C16.1659 40.9149 15.1865 40.1042 15.1865 39.1042V35.483C15.1865 34.483 16.1659 33.6724 17.374 33.6724Z" stroke="#1873DE" stroke-width="1.81062" stroke-linecap="round" stroke-linejoin="round"/>
-                              <rect x="37" y="-0.00012207" width="22" height="22" rx="11" fill="#E6372B"/>
-                              <path d="M50.0623 9.43414L46.9373 12.8196M46.9373 9.43414L50.0623 12.8196M53.4998 11.8039C53.4998 15.1894 51.3123 16.8821 48.7123 17.8638C48.5761 17.9138 48.4282 17.9114 48.2935 17.8571C45.6873 16.8821 43.4998 15.1894 43.4998 11.8039V7.06435C43.4998 6.88478 43.5656 6.71256 43.6828 6.58558C43.8 6.4586 43.959 6.38727 44.1248 6.38727C45.3748 6.38727 46.9373 5.57477 48.0248 4.5456C48.1572 4.42305 48.3256 4.35571 48.4998 4.35571C48.6739 4.35571 48.8423 4.42305 48.9748 4.5456C50.0685 5.58154 51.6248 6.38727 52.8748 6.38727C53.0405 6.38727 53.1995 6.4586 53.3167 6.58558C53.4339 6.71256 53.4998 6.88478 53.4998 7.06435V11.8039Z" stroke="#FFF8F7" stroke-width="0.739568" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <div class="node-info">
-                              <span class="node-title">Loremipsumdolorsit002</span>
-                              <div class="node-ip-header">192.168.1.2</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tooltip-content">
-                          <div class="info-section">
-                            <div class="info-row">
-                              <span class="info-icon">📄</span>
-                              <span class="info-text">Lorem:</span>
-                              <span class="info-value highlight">Lorem "Ipsum"</span>
-                            </div>
-                            <div class="info-row">
-                              <span class="info-text">Loremipsum</span>
-                              <span class="info-value blue">Lorem 1234,5678</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                      <!-- Node Labels positioned below centered nodes -->
+                      <text x="80" y="200" text-anchor="middle" fill="#6b7280" font-family="Inter, sans-serif" font-size="15" font-weight="600">Loremipsumm</text>
+                      <text x="240" y="200" text-anchor="middle" fill="#6b7280" font-family="Inter, sans-serif" font-size="15" font-weight="600">Loremipsu</text>
+                      <text x="400" y="200" text-anchor="middle" fill="#6b7280" font-family="Inter, sans-serif" font-size="15" font-weight="600">Loremipsu</text>
 
-                  <!-- Connection lines -->
-                  <div class="connection connection-horizontal conn-1-2"></div>
-                  <div class="connection connection-horizontal conn-2-3"></div>
+                      <!-- Node 4 Label and IP - positioned to match uploaded image -->
+                      <text x="780" y="110" text-anchor="middle" fill="#6b7280" font-family="Inter, sans-serif" font-size="15" font-weight="600">Loremipsumdolorsit</text>
+                      <text x="780" y="127" text-anchor="middle" fill="#9ca3af" font-family="Inter, sans-serif" font-size="12">192.168.1.1</text>
 
-                  <!-- Y-shaped connector from node 3 to both target nodes -->
-                  <div class="y-connector">
-                    <svg viewBox="0 0 200 160">
-                      <!-- Main horizontal line from node 3 -->
-                      <path
-                        class="connector-path"
-                        d="M 0 80 L 50 80"
-                      />
+                      <!-- Node 5 Label and IP - positioned to match uploaded image -->
+                      <text x="780" y="257" text-anchor="middle" fill="#6b7280" font-family="Inter, sans-serif" font-size="15" font-weight="600">Loremipsumdolorsit002</text>
+                      <text x="780" y="273" text-anchor="middle" fill="#9ca3af" font-family="Inter, sans-serif" font-size="12">192.168.1.2</text>
 
-                      <!-- Upper branch to node 4 -->
-                      <path
-                        class="connector-path"
-                        d="M 50 80 L 100 30 L 200 30"
-                      />
-
-                      <!-- Lower branch to node 5 -->
-                      <path
-                        class="connector-path"
-                        d="M 50 80 L 100 130 L 200 130"
-                      />
+                      <!-- Hover areas for tooltips - updated for centered nodes -->
+                      <circle cx="80" cy="139" r="40" fill="transparent" (mouseenter)="showNodeTooltip = true" (mouseleave)="showNodeTooltip = false" style="cursor: pointer;"/>
+                      <circle cx="250" cy="139" r="40" fill="transparent" (mouseenter)="showNode2Tooltip = true" (mouseleave)="showNode2Tooltip = false" style="cursor: pointer;"/>
+                      <circle cx="410" cy="139" r="40" fill="transparent" (mouseenter)="showNode3Tooltip = true" (mouseleave)="showNode3Tooltip = false" style="cursor: pointer;"/>
+                      <circle cx="780" cy="50" r="40" fill="transparent" (mouseenter)="showNode4Tooltip = true" (mouseleave)="showNode4Tooltip = false" style="cursor: pointer;"/>
+                      <circle cx="780" cy="200" r="40" fill="transparent" (mouseenter)="showNode5Tooltip = true" (mouseleave)="showNode5Tooltip = false" style="cursor: pointer;"/>
                     </svg>
                   </div>
 
-                  <!-- Arrows -->
-                  <div class="arrow arrow-right arrow-1-2"></div>
-                  <div class="arrow arrow-right arrow-2-3"></div>
-                  <div class="arrow arrow-right arrow-to-4"></div>
-                  <div class="arrow arrow-right arrow-to-5"></div>
+                  <!-- Tooltip overlays for SVG nodes -->
+                  <div class="tooltip-overlay">
+                    <!-- Node 1 Tooltip -->
+                    <div class="node node-1">
+                      <!-- Hover Card with Backdrop -->
+                      <div class="tooltip-backdrop" *ngIf="showNodeTooltip">
+                        <div class="node-tooltip">
+                          <div class="tooltip-header">
+                            <h4>Lorem Ipsum Dolor Sit</h4>
+                          </div>
+                          <div class="tooltip-content">
+                            <div class="version-grid">
+                              <div class="version-item red">1.2.3.4</div>
+                              <div class="version-item red">1.2.3.4</div>
+                              <div class="version-item red">1.2.3.4</div>
+                              <div class="version-item red">1.2.3.4</div>
+                              <div class="version-item red">1.2.3.4</div>
+                              <div class="version-item red">1.2.3.4</div>
+                            </div>
+                            <div class="lorem-section">
+                              <span class="lorem-label">Lorem:  1.2.3.4</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Node 2 Tooltip -->
+                    <div class="node node-2">
+                      <div class="tooltip-backdrop" *ngIf="showNode2Tooltip">
+                        <div class="node-tooltip node-2-tooltip">
+                          <div class="tooltip-header">
+                            <div class="shield-icon-header">
+                              <svg width="24" height="24" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="shield-icon-inline">
+                                <circle cx="19.8448" cy="19.8448" r="19.845" fill="#D7EAFF"/>
+                                <g clip-path="url(#clip0_26_588)">
+                                  <path d="M15.2036 15.1255H15.2118M15.2036 24.9693H15.2118M13.563 11.8443H26.688C27.5941 11.8443 28.3286 12.5788 28.3286 13.4849V16.7661C28.3286 17.6722 27.5941 18.4068 26.688 18.4068H13.563C12.6569 18.4068 11.9224 17.6722 11.9224 16.7661V13.4849C11.9224 12.5788 12.6569 11.8443 13.563 11.8443ZM13.563 21.688H26.688C27.5941 21.688 28.3286 22.4225 28.3286 23.3286V26.6099C28.3286 27.516 27.5941 28.2505 26.688 28.2505H13.563C12.6569 28.2505 11.9224 27.516 11.9224 26.6099V23.3286C11.9224 22.4225 12.6569 21.688 13.563 21.688Z" stroke="#1873DE" stroke-width="1.64062" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_26_588">
+                                    <rect width="19.6875" height="19.6875" fill="white" transform="translate(10.282 10.2039)"/>
+                                  </clipPath>
+                                </defs>
+                              </svg>
+                              <span class="node-title">Loremipsu</span>
+                            </div>
+                          </div>
+                          <div class="tooltip-content">
+                            <div class="info-section">
+                              <div class="info-row">
+                                <span class="info-icon">📄</span>
+                                <span class="info-text">Lorem: Loremipsum Loremipsum</span>
+                                <span class="info-value blue">1.2.3.4</span>
+                              </div>
+                              <div class="version-row">
+                                <span class="version-numbers blue">1.2.3.4</span>
+                                <span class="version-text">Loremipsum</span>
+                                <span class="version-numbers blue">1.2.3.4</span>
+                                <span class="version-numbers blue">1.2.3.4</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Node 3 Tooltip -->
+                    <div class="node node-3">
+                      <div class="tooltip-backdrop" *ngIf="showNode3Tooltip">
+                        <div class="node-tooltip node-3-tooltip">
+                          <div class="tooltip-header">
+                            <div class="shield-icon-header">
+                              <svg width="24" height="24" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="shield-icon-inline">
+                                <circle cx="19.8448" cy="19.8448" r="19.845" fill="#D7EAFF"/>
+                                <g clip-path="url(#clip0_26_588_node3)">
+                                  <path d="M15.2036 15.1255H15.2118M15.2036 24.9693H15.2118M13.563 11.8443H26.688C27.5941 11.8443 28.3286 12.5788 28.3286 13.4849V16.7661C28.3286 17.6722 27.5941 18.4068 26.688 18.4068H13.563C12.6569 18.4068 11.9224 17.6722 11.9224 16.7661V13.4849C11.9224 12.5788 12.6569 11.8443 13.563 11.8443ZM13.563 21.688H26.688C27.5941 21.688 28.3286 22.4225 28.3286 23.3286V26.6099C28.3286 27.516 27.5941 28.2505 26.688 28.2505H13.563C12.6569 28.2505 11.9224 27.516 11.9224 26.6099V23.3286C11.9224 22.4225 12.6569 21.688 13.563 21.688Z" stroke="#1873DE" stroke-width="1.64062" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_26_588_node3">
+                                    <rect width="19.6875" height="19.6875" fill="white" transform="translate(10.282 10.2039)"/>
+                                  </clipPath>
+                                </defs>
+                              </svg>
+                              <span class="node-title">Loremipsu</span>
+                            </div>
+                          </div>
+                          <div class="tooltip-content">
+                            <div class="info-section">
+                              <div class="info-row">
+                                <span class="info-icon">📄</span>
+                                <span class="info-text">Lorem: Loremipsum Loremipsum</span>
+                                <span class="info-value blue">1.2.3.4</span>
+                              </div>
+                              <div class="version-row">
+                                <span class="version-numbers blue">1.2.3.4</span>
+                                <span class="version-text">Loremipsum</span>
+                                <span class="version-numbers blue">1.2.3.4</span>
+                                <span class="version-numbers blue">1.2.3.4</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Node 4 Tooltip -->
+                    <div class="node node-4">
+                      <div class="tooltip-backdrop" *ngIf="showNode4Tooltip">
+                        <div class="node-tooltip node-4-tooltip">
+                          <div class="tooltip-header">
+                            <div class="shield-icon-header">
+                              <svg width="32" height="32" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg" class="shield-icon-inline">
+                                <circle cx="26.5" cy="31.9101" r="26.46" fill="#D7EAFF"/>
+                                <path d="M19.5615 26.4298H19.5725M19.5615 37.2936H19.5725M17.374 22.8086H34.874C36.0821 22.8086 37.0615 23.6192 37.0615 24.6192V28.2405C37.0615 29.2405 36.0821 30.0511 34.874 30.0511H17.374C16.1659 30.0511 15.1865 29.2405 15.1865 28.2405V24.6192C15.1865 23.6192 16.1659 22.8086 17.374 22.8086ZM17.374 33.6724H34.874C36.0821 33.6724 37.0615 34.483 37.0615 35.483V39.1042C37.0615 40.1042 36.0821 40.9149 34.874 40.9149H17.374C16.1659 40.9149 15.1865 40.1042 15.1865 39.1042V35.483C15.1865 34.483 16.1659 33.6724 17.374 33.6724Z" stroke="#1873DE" stroke-width="1.81062" stroke-linecap="round" stroke-linejoin="round"/>
+                                <rect x="37" y="-0.00012207" width="22" height="22" rx="11" fill="#E6372B"/>
+                                <path d="M50.0623 9.43414L46.9373 12.8196M46.9373 9.43414L50.0623 12.8196M53.4998 11.8039C53.4998 15.1894 51.3123 16.8821 48.7123 17.8638C48.5761 17.9138 48.4282 17.9114 48.2935 17.8571C45.6873 16.8821 43.4998 15.1894 43.4998 11.8039V7.06435C43.4998 6.88478 43.5656 6.71256 43.6828 6.58558C43.8 6.4586 43.959 6.38727 44.1248 6.38727C45.3748 6.38727 46.9373 5.57477 48.0248 4.5456C48.1572 4.42305 48.3256 4.35571 48.4998 4.35571C48.6739 4.35571 48.8423 4.42305 48.9748 4.5456C50.0685 5.58154 51.6248 6.38727 52.8748 6.38727C53.0405 6.38727 53.1995 6.4586 53.3167 6.58558C53.4339 6.71256 53.4998 6.88478 53.4998 7.06435V11.8039Z" stroke="#FFF8F7" stroke-width="0.739568" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                              <div class="node-info">
+                                <span class="node-title">Loremipsumdolorsit001</span>
+                                <div class="node-ip-header">192.168.1.1</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tooltip-content">
+                            <div class="info-section">
+                              <div class="info-row">
+                                <span class="info-icon">📄</span>
+                                <span class="info-text">Lorem:</span>
+                                <span class="info-value highlight">Lorem "Ipsum"</span>
+                              </div>
+                              <div class="info-row">
+                                <span class="info-text">Loremipsum</span>
+                                <span class="info-value blue">Lorem 1234,5678</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Node 5 Tooltip -->
+                    <div class="node node-5">
+                      <div class="tooltip-backdrop" *ngIf="showNode5Tooltip">
+                        <div class="node-tooltip node-5-tooltip">
+                          <div class="tooltip-header">
+                            <div class="shield-icon-header">
+                              <svg width="32" height="32" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg" class="shield-icon-inline">
+                                <circle cx="26.5" cy="31.9101" r="26.46" fill="#D7EAFF"/>
+                                <path d="M19.5615 26.4298H19.5725M19.5615 37.2936H19.5725M17.374 22.8086H34.874C36.0821 22.8086 37.0615 23.6192 37.0615 24.6192V28.2405C37.0615 29.2405 36.0821 30.0511 34.874 30.0511H17.374C16.1659 30.0511 15.1865 29.2405 15.1865 28.2405V24.6192C15.1865 23.6192 16.1659 22.8086 17.374 22.8086ZM17.374 33.6724H34.874C36.0821 33.6724 37.0615 34.483 37.0615 35.483V39.1042C37.0615 40.1042 36.0821 40.9149 34.874 40.9149H17.374C16.1659 40.9149 15.1865 40.1042 15.1865 39.1042V35.483C15.1865 34.483 16.1659 33.6724 17.374 33.6724Z" stroke="#1873DE" stroke-width="1.81062" stroke-linecap="round" stroke-linejoin="round"/>
+                                <rect x="37" y="-0.00012207" width="22" height="22" rx="11" fill="#E6372B"/>
+                                <path d="M50.0623 9.43414L46.9373 12.8196M46.9373 9.43414L50.0623 12.8196M53.4998 11.8039C53.4998 15.1894 51.3123 16.8821 48.7123 17.8638C48.5761 17.9138 48.4282 17.9114 48.2935 17.8571C45.6873 16.8821 43.4998 15.1894 43.4998 11.8039V7.06435C43.4998 6.88478 43.5656 6.71256 43.6828 6.58558C43.8 6.4586 43.959 6.38727 44.1248 6.38727C45.3748 6.38727 46.9373 5.57477 48.0248 4.5456C48.1572 4.42305 48.3256 4.35571 48.4998 4.35571C48.6739 4.35571 48.8423 4.42305 48.9748 4.5456C50.0685 5.58154 51.6248 6.38727 52.8748 6.38727C53.0405 6.38727 53.1995 6.4586 53.3167 6.58558C53.4339 6.71256 53.4998 6.88478 53.4998 7.06435V11.8039Z" stroke="#FFF8F7" stroke-width="0.739568" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                              <div class="node-info">
+                                <span class="node-title">Loremipsumdolorsit002</span>
+                                <div class="node-ip-header">192.168.1.2</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tooltip-content">
+                            <div class="info-section">
+                              <div class="info-row">
+                                <span class="info-icon">📄</span>
+                                <span class="info-text">Lorem:</span>
+                                <span class="info-value highlight">Lorem "Ipsum"</span>
+                              </div>
+                              <div class="info-row">
+                                <span class="info-text">Loremipsum</span>
+                                <span class="info-value blue">Lorem 1234,5678</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
 
-                <!-- Legend -->
+                <!-- Legend with Shield SVG Icons -->
                 <div class="legend">
                   <div class="legend-item">
-                    <div class="legend-icon error"></div>
+                    <div class="legend-icon-svg">
+                      <svg width="25" height="25" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 12.84C0 5.93641 5.59644 0.339966 12.5 0.339966C19.4036 0.339966 25 5.93641 25 12.84C25 19.7435 19.4036 25.34 12.5 25.34C5.59644 25.34 0 19.7435 0 12.84Z" fill="#E6372B"/>
+                        <path d="M14.2358 10.8225L10.7635 14.5841M10.7635 10.8225L14.2358 14.5841M18.0552 13.4556C18.0552 17.2172 15.6246 19.098 12.7358 20.1888C12.5845 20.2444 12.4202 20.2417 12.2705 20.1813C9.37465 19.098 6.94409 17.2172 6.94409 13.4556V8.18941C6.94409 7.98988 7.01726 7.79853 7.14749 7.65744C7.27772 7.51635 7.45436 7.43709 7.63854 7.43709C9.02742 7.43709 10.7635 6.53431 11.9719 5.3908C12.119 5.25463 12.3061 5.17981 12.4996 5.17981C12.6932 5.17981 12.8803 5.25463 13.0274 5.3908C14.2427 6.54184 15.9719 7.43709 17.3608 7.43709C17.5449 7.43709 17.7216 7.51635 17.8518 7.65744C17.982 7.79853 18.0552 7.98988 18.0552 8.18941V13.4556Z" stroke="#FFF8F7" stroke-width="1.46" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
                     <span class="legend-text error">Lorem</span>
                   </div>
                   <div class="legend-item">
-                    <div class="legend-icon warning"></div>
+                    <div class="legend-icon-svg">
+                      <svg width="25" height="25" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 12.84C0 5.93641 5.59644 0.339966 12.5 0.339966C19.4036 0.339966 25 5.93641 25 12.84C25 19.7435 19.4036 25.34 12.5 25.34C5.59644 25.34 0 19.7435 0 12.84Z" fill="#FF9500"/>
+                        <path d="M14.2358 10.8225L10.7635 14.5841M10.7635 10.8225L14.2358 14.5841M18.0552 13.4556C18.0552 17.2172 15.6246 19.098 12.7358 20.1888C12.5845 20.2444 12.4202 20.2417 12.2705 20.1813C9.37465 19.098 6.94409 17.2172 6.94409 13.4556V8.18941C6.94409 7.98988 7.01726 7.79853 7.14749 7.65744C7.27772 7.51635 7.45436 7.43709 7.63854 7.43709C9.02742 7.43709 10.7635 6.53431 11.9719 5.3908C12.119 5.25463 12.3061 5.17981 12.4996 5.17981C12.6932 5.17981 12.8803 5.25463 13.0274 5.3908C14.2427 6.54184 15.9719 7.43709 17.3608 7.43709C17.5449 7.43709 17.7216 7.51635 17.8518 7.65744C17.982 7.79853 18.0552 7.98988 18.0552 8.18941V13.4556Z" stroke="#FFF8F7" stroke-width="1.46" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
                     <span class="legend-text warning">Lorem</span>
                   </div>
                   <div class="legend-item">
-                    <div class="legend-icon success"></div>
+                    <div class="legend-icon-svg">
+                      <svg width="25" height="25" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 12.84C0 5.93641 5.59644 0.339966 12.5 0.339966C19.4036 0.339966 25 5.93641 25 12.84C25 19.7435 19.4036 25.34 12.5 25.34C5.59644 25.34 0 19.7435 0 12.84Z" fill="#02983E"/>
+                        <path d="M14.2766 11.4334L12.2597 14.4683L10.897 13.5711M18.3337 13.5711C18.3337 17.2169 15.7816 19.0398 12.7482 20.0971C12.5894 20.151 12.4169 20.1484 12.2597 20.0898C9.21908 19.0398 6.66699 17.2169 6.66699 13.5711V8.46692C6.66699 8.27353 6.74382 8.08807 6.88056 7.95132C7.01731 7.81458 7.20277 7.73775 7.39616 7.73775C8.85449 7.73775 10.6774 6.86275 11.9462 5.75442C12.1006 5.62244 12.2971 5.54993 12.5003 5.54993C12.7035 5.54993 12.9 5.62244 13.0545 5.75442C14.3305 6.87005 16.1462 7.73775 17.6045 7.73775C17.7979 7.73775 17.9833 7.81458 18.1201 7.95132C18.2568 8.08807 18.3337 8.27353 18.3337 8.46692V13.5711Z" stroke="#FFF8F7" stroke-width="1.46434" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
                     <span class="legend-text success">Lorem</span>
                   </div>
                 </div>
@@ -469,7 +470,12 @@
                 </div>
                 <div class="list-body">
                   <div class="asset-row">
-                    <div class="row-icon"></div>
+                    <div class="row-icon">
+                      <svg width="45" height="45" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="19.8448" cy="19.8448" r="19.845" fill="#D7EAFF"/>
+                        <path d="M15.2036 15.1255H15.2118M15.2036 24.9693H15.2118M13.563 11.8443H26.688C27.5941 11.8443 28.3286 12.5788 28.3286 13.4849V16.7661C28.3286 17.6722 27.5941 18.4068 26.688 18.4068H13.563C12.6569 18.4068 11.9224 17.6722 11.9224 16.7661V13.4849C11.9224 12.5788 12.6569 11.8443 13.563 11.8443ZM13.563 21.688H26.688C27.5941 21.688 28.3286 22.4225 28.3286 23.3286V26.6099C28.3286 27.516 27.5941 28.2505 26.688 28.2505H13.563C12.6569 28.2505 11.9224 27.516 11.9224 26.6099V23.3286C11.9224 22.4225 12.6569 21.688 13.563 21.688Z" stroke="#1873DE" stroke-width="1.64062" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
                     <div class="asset-meta">
                       <div class="asset-name">Loremipsumdolorsit</div>
                       <div class="asset-ip">192.168.1.1</div>
@@ -477,7 +483,12 @@
                     <span class="badge critical">Critical</span>
                   </div>
                   <div class="asset-row">
-                    <div class="row-icon"></div>
+                    <div class="row-icon">
+                      <svg width="45" height="45" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="19.8448" cy="19.8448" r="19.845" fill="#D7EAFF"/>
+                        <path d="M15.2036 15.1255H15.2118M15.2036 24.9693H15.2118M13.563 11.8443H26.688C27.5941 11.8443 28.3286 12.5788 28.3286 13.4849V16.7661C28.3286 17.6722 27.5941 18.4068 26.688 18.4068H13.563C12.6569 18.4068 11.9224 17.6722 11.9224 16.7661V13.4849C11.9224 12.5788 12.6569 11.8443 13.563 11.8443ZM13.563 21.688H26.688C27.5941 21.688 28.3286 22.4225 28.3286 23.3286V26.6099C28.3286 27.516 27.5941 28.2505 26.688 28.2505H13.563C12.6569 28.2505 11.9224 27.516 11.9224 26.6099V23.3286C11.9224 22.4225 12.6569 21.688 13.563 21.688Z" stroke="#1873DE" stroke-width="1.64062" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
                     <div class="asset-meta">
                       <div class="asset-name">Loremipsumdolorsit002</div>
                       <div class="asset-ip">192.168.1.2</div>
