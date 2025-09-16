@@ -159,14 +159,14 @@
                   <!-- SVG Network Diagram - matches uploaded image 100% perfectly -->
                   <div class="svg-network-container" [class.sidebar-collapsed]="sidebarCollapsed()">
                     <svg width="1000" height="250" viewBox="0 0 1000 250" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <!-- Connection Arrows aligned with Y-connector stem -->
-                      <!-- Arrow from Node 1 to Node 2 -->
-                      <g transform="translate(130, 139) scale(1.4)">
+                      <!-- Connection Arrows with spacing around nodes -->
+                      <!-- Arrow from Node 1 to Node 2 (shortened to avoid node overlap) -->
+                      <g transform="translate(120, 139) scale(1.0)">
                         <path d="M59 2.92004L55.25 0.754978L55.25 5.08511L59 2.92004ZM0.5 3.29504L55.625 3.29504L55.625 2.54504L0.5 2.54504L0.5 3.29504Z" fill="#858D9D"/>
                       </g>
 
-                      <!-- Arrow from Node 2 to Node 3 -->
-                      <g transform="translate(290, 139) scale(1.4)">
+                      <!-- Arrow from Node 2 to Node 3 (shortened to avoid node overlap) -->
+                      <g transform="translate(290, 139) scale(1.0)">
                         <path d="M59 2.92004L55.25 0.754978L55.25 5.08511L59 2.92004ZM0.5 3.29504L55.625 3.29504L55.625 2.54504L0.5 2.54504L0.5 3.29504Z" fill="#858D9D"/>
                       </g>
 
@@ -178,8 +178,8 @@
                         <path d="M208 107.279L204.25 105.114L204.25 109.444L208 107.279ZM80.9605 54.9038L-3.50411e-06 54.9038L-3.45394e-06 55.6538L80.9605 55.6538L80.9605 54.9038ZM204.625 106.904L144.667 106.904L144.667 107.654L204.625 107.654L204.625 106.904ZM127.504 98.7416L98.7049 63.3427L98.1231 63.816L126.922 99.2149L127.504 98.7416ZM144.667 106.904C138.009 106.904 131.705 103.906 127.504 98.7416L126.922 99.2149C131.266 104.554 137.783 107.654 144.667 107.654L144.667 106.904ZM80.9605 55.6538C87.618 55.6538 93.9216 58.6517 98.1231 63.816L98.7049 63.3427C94.361 58.0033 87.8437 54.9038 80.9605 54.9038L80.9605 55.6538Z" fill="#858D9D"/>
                       </g>
 
-                      <!-- Node 1: Loremipsumm (Purple with user icon) - embedded shield-purple.svg content -->
-                      <g id="node1" transform="translate(40, 85) scale(1.35)">
+                      <!-- Node 1: Loremipsumm (Purple with user icon) - centered on connection line -->
+                      <g id="node1" transform="translate(40, 94) scale(1.35)">
                         <!-- Embedded shield-purple.svg content, scaled up -->
                         <circle cx="26.5" cy="33.37" r="26.46" fill="#FFF1F0"/>
                         <path d="M16.1667 33.4599C16.1667 34.8965 16.7374 36.2742 17.7533 37.29C18.7691 38.3059 20.1468 38.8765 21.5834 38.8765C23.5851 38.9511 25.4992 39.7167 27.0001 41.0432C28.501 39.7167 30.4151 38.9511 32.4167 38.8765C33.8533 38.8765 35.2311 38.3059 36.2469 37.29C37.2627 36.2742 37.8334 34.8965 37.8334 33.4599V28.0432H32.4167C30.4151 28.1178 28.501 28.8834 27.0001 30.2099C25.4992 28.8834 23.5851 28.1178 21.5834 28.0432H16.1667V33.4599Z" stroke="#E6372B" stroke-width="1.625" stroke-linecap="round" stroke-linejoin="round"/>
@@ -189,15 +189,15 @@
                         <path d="M41.5815 15.7436V14.2269C41.5815 13.92 41.6605 13.6378 41.8185 13.3805C41.9765 13.1233 42.1864 12.9269 42.4482 12.7915C43.0079 12.5116 43.5767 12.3017 44.1545 12.1618C44.7322 12.0219 45.319 11.9519 45.9149 11.9519C46.5107 11.9519 47.0975 12.0219 47.6753 12.1618C48.2531 12.3017 48.8218 12.5116 49.3815 12.7915C49.6433 12.9269 49.8532 13.1233 50.0112 13.3805C50.1692 13.6378 50.2482 13.92 50.2482 14.2269V15.7436H41.5815ZM51.3315 15.7436V14.1186C51.3315 13.7213 51.221 13.3399 50.9998 12.9743C50.7786 12.6087 50.4649 12.295 50.0586 12.0332C50.519 12.0873 50.9524 12.1799 51.3586 12.3108C51.7649 12.4417 52.144 12.6019 52.4961 12.7915C52.8211 12.972 53.0694 13.1729 53.2409 13.3941C53.4124 13.6153 53.4982 13.8568 53.4982 14.1186V15.7436H51.3315ZM45.9149 11.4102C45.319 11.4102 44.809 11.1981 44.3847 10.7738C43.9604 10.3495 43.7482 9.8394 43.7482 9.24357C43.7482 8.64774 43.9604 8.13767 44.3847 7.71336C44.809 7.28906 45.319 7.0769 45.9149 7.0769C46.5107 7.0769 47.0208 7.28906 47.4451 7.71336C47.8694 8.13767 48.0815 8.64774 48.0815 9.24357C48.0815 9.8394 47.8694 10.3495 47.4451 10.7738C47.0208 11.1981 46.5107 11.4102 45.9149 11.4102ZM51.3315 9.24357C51.3315 9.8394 51.1194 10.3495 50.6951 10.7738C50.2708 11.1981 49.7607 11.4102 49.1649 11.4102C49.0656 11.4102 48.9392 11.399 48.7857 11.3764C48.6322 11.3538 48.5058 11.329 48.4065 11.3019C48.6503 11.013 48.8376 10.6925 48.9685 10.3404C49.0994 9.98836 49.1649 9.62274 49.1649 9.24357C49.1649 8.8644 49.0994 8.49878 48.9685 8.1467C48.8376 7.79461 48.6503 7.47413 48.4065 7.18524C48.5329 7.1401 48.6593 7.11076 48.7857 7.09722C48.9121 7.08368 49.0385 7.0769 49.1649 7.0769C49.7607 7.0769 50.2708 7.28906 50.6951 7.71336C51.1194 8.13767 51.3315 8.64774 51.3315 9.24357ZM42.6649 14.6602H49.1649V14.2269C49.1649 14.1276 49.14 14.0373 49.0904 13.9561C49.0407 13.8748 48.9753 13.8116 48.894 13.7665C48.4065 13.5227 47.9145 13.3399 47.418 13.2181C46.9215 13.0962 46.4204 13.0352 45.9149 13.0352C45.4093 13.0352 44.9083 13.0962 44.4118 13.2181C43.9152 13.3399 43.4232 13.5227 42.9357 13.7665C42.8545 13.8116 42.789 13.8748 42.7394 13.9561C42.6897 14.0373 42.6649 14.1276 42.6649 14.2269V14.6602ZM45.9149 10.3269C46.2128 10.3269 46.4678 10.2208 46.68 10.0087C46.8921 9.79652 46.9982 9.54149 46.9982 9.24357C46.9982 8.94565 46.8921 8.69062 46.68 8.47847C46.4678 8.26631 46.2128 8.16024 45.9149 8.16024C45.617 8.16024 45.3619 8.26631 45.1498 8.47847C44.9376 8.69062 44.8315 8.94565 44.8315 9.24357C44.8315 9.54149 44.9376 9.79652 45.1498 10.0087C45.3619 10.2208 45.617 10.3269 45.9149 10.3269Z" fill="white"/>
                       </g>
 
-                      <!-- Node 2: Loremipsu (Blue server icon) - embedded shield-blue.svg content -->
-                      <g id="node2" transform="translate(210, 85) scale(2.0)">
+                      <!-- Node 2: Loremipsu (Blue server icon) - centered on connection line -->
+                      <g id="node2" transform="translate(210, 99) scale(2.0)">
                         <!-- Embedded shield-blue.svg content, scaled up -->
                         <circle cx="19.8448" cy="19.8448" r="19.845" fill="#D7EAFF"/>
                         <path d="M15.2036 15.1255H15.2118M15.2036 24.9693H15.2118M13.563 11.8443H26.688C27.5941 11.8443 28.3286 12.5788 28.3286 13.4849V16.7661C28.3286 17.6722 27.5941 18.4068 26.688 18.4068H13.563C12.6569 18.4068 11.9224 17.6722 11.9224 16.7661V13.4849C11.9224 12.5788 12.6569 11.8443 13.563 11.8443ZM13.563 21.688H26.688C27.5941 21.688 28.3286 22.4225 28.3286 23.3286V26.6099C28.3286 27.516 27.5941 28.2505 26.688 28.2505H13.563C12.6569 28.2505 11.9224 27.516 11.9224 26.6099V23.3286C11.9224 22.4225 12.6569 21.688 13.563 21.688Z" stroke="#1873DE" stroke-width="1.64062" stroke-linecap="round" stroke-linejoin="round"/>
                       </g>
 
-                      <!-- Node 3: Loremipsu (Blue server icon) - embedded shield-blue.svg content -->
-                      <g id="node3" transform="translate(370, 85) scale(2.0)">
+                      <!-- Node 3: Loremipsu (Blue server icon) - centered on connection line -->
+                      <g id="node3" transform="translate(370, 99) scale(2.0)">
                         <!-- Embedded shield-blue.svg content, scaled up -->
                         <circle cx="19.8448" cy="19.8448" r="19.845" fill="#D7EAFF"/>
                         <path d="M15.2036 15.1255H15.2118M15.2036 24.9693H15.2118M13.563 11.8443H26.688C27.5941 11.8443 28.3286 12.5788 28.3286 13.4849V16.7661C28.3286 17.6722 27.5941 18.4068 26.688 18.4068H13.563C12.6569 18.4068 11.9224 17.6722 11.9224 16.7661V13.4849C11.9224 12.5788 12.6569 11.8443 13.563 11.8443ZM13.563 21.688H26.688C27.5941 21.688 28.3286 22.4225 28.3286 23.3286V26.6099C28.3286 27.516 27.5941 28.2505 26.688 28.2505H13.563C12.6569 28.2505 11.9224 27.516 11.9224 26.6099V23.3286C11.9224 22.4225 12.6569 21.688 13.563 21.688Z" stroke="#1873DE" stroke-width="1.64062" stroke-linecap="round" stroke-linejoin="round"/>
@@ -221,10 +221,10 @@
                         <path d="M50.0623 9.43414L46.9373 12.8196M46.9373 9.43414L50.0623 12.8196M53.4998 11.8039C53.4998 15.1894 51.3123 16.8821 48.7123 17.8638C48.5761 17.9138 48.4282 17.9114 48.2935 17.8571C45.6873 16.8821 43.4998 15.1894 43.4998 11.8039V7.06435C43.4998 6.88478 43.5656 6.71256 43.6828 6.58558C43.8 6.4586 43.959 6.38727 44.1248 6.38727C45.3748 6.38727 46.9373 5.57477 48.0248 4.5456C48.1572 4.42305 48.3256 4.35571 48.4998 4.35571C48.6739 4.35571 48.8423 4.42305 48.9748 4.5456C50.0685 5.58154 51.6248 6.38727 52.8748 6.38727C53.0405 6.38727 53.1995 6.4586 53.3167 6.58558C53.4339 6.71256 53.4998 6.88478 53.4998 7.06435V11.8039Z" stroke="#FFF8F7" stroke-width="0.739568" stroke-linecap="round" stroke-linejoin="round"/>
                       </g>
 
-                      <!-- Node Labels positioned to match uploaded image exactly -->
-                      <text x="80" y="160" text-anchor="middle" fill="#6b7280" font-family="Inter, sans-serif" font-size="11" font-weight="500">Loremipsumm</text>
-                      <text x="250" y="160" text-anchor="middle" fill="#6b7280" font-family="Inter, sans-serif" font-size="11" font-weight="500">Loremipsu</text>
-                      <text x="410" y="160" text-anchor="middle" fill="#6b7280" font-family="Inter, sans-serif" font-size="11" font-weight="500">Loremipsu</text>
+                      <!-- Node Labels positioned below centered nodes -->
+                      <text x="80" y="190" text-anchor="middle" fill="#6b7280" font-family="Inter, sans-serif" font-size="14" font-weight="500">Loremipsumm</text>
+                      <text x="250" y="190" text-anchor="middle" fill="#6b7280" font-family="Inter, sans-serif" font-size="14" font-weight="500">Loremipsu</text>
+                      <text x="410" y="190" text-anchor="middle" fill="#6b7280" font-family="Inter, sans-serif" font-size="14" font-weight="500">Loremipsu</text>
 
                       <!-- Node 4 Label and IP - positioned to match uploaded image -->
                       <text x="780" y="85" text-anchor="middle" fill="#6b7280" font-family="Inter, sans-serif" font-size="11" font-weight="500">Loremipsumdolorsit</text>
@@ -234,10 +234,10 @@
                       <text x="780" y="235" text-anchor="middle" fill="#6b7280" font-family="Inter, sans-serif" font-size="11" font-weight="500">Loremipsumdolorsit002</text>
                       <text x="780" y="248" text-anchor="middle" fill="#9ca3af" font-family="Inter, sans-serif" font-size="9">192.168.1.2</text>
 
-                      <!-- Hover areas for tooltips - updated for larger nodes -->
-                      <circle cx="80" cy="125" r="40" fill="transparent" (mouseenter)="showNodeTooltip = true" (mouseleave)="showNodeTooltip = false" style="cursor: pointer;"/>
-                      <circle cx="250" cy="125" r="40" fill="transparent" (mouseenter)="showNode2Tooltip = true" (mouseleave)="showNode2Tooltip = false" style="cursor: pointer;"/>
-                      <circle cx="410" cy="125" r="40" fill="transparent" (mouseenter)="showNode3Tooltip = true" (mouseleave)="showNode3Tooltip = false" style="cursor: pointer;"/>
+                      <!-- Hover areas for tooltips - updated for centered nodes -->
+                      <circle cx="80" cy="139" r="40" fill="transparent" (mouseenter)="showNodeTooltip = true" (mouseleave)="showNodeTooltip = false" style="cursor: pointer;"/>
+                      <circle cx="250" cy="139" r="40" fill="transparent" (mouseenter)="showNode2Tooltip = true" (mouseleave)="showNode2Tooltip = false" style="cursor: pointer;"/>
+                      <circle cx="410" cy="139" r="40" fill="transparent" (mouseenter)="showNode3Tooltip = true" (mouseleave)="showNode3Tooltip = false" style="cursor: pointer;"/>
                       <circle cx="780" cy="50" r="40" fill="transparent" (mouseenter)="showNode4Tooltip = true" (mouseleave)="showNode4Tooltip = false" style="cursor: pointer;"/>
                       <circle cx="780" cy="200" r="40" fill="transparent" (mouseenter)="showNode5Tooltip = true" (mouseleave)="showNode5Tooltip = false" style="cursor: pointer;"/>
                     </svg>
