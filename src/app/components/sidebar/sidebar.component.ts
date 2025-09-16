@@ -36,6 +36,16 @@ export class SidebarComponent {
   get bottomItems(): SidebarItem[] { return this.sidebarItems.slice(7); }
   get activeItem(): SidebarItem | undefined { return this.sidebarItems.find(i => i.active); }
 
+  getCollapsedIcon(): string {
+    const activeIcon = this.activeItem?.icon ?? 'grid';
+    if (activeIcon === 'inward') {
+      console.log('Using logo.jpeg for collapsed inward icon');
+      return 'assets/icons/logo.jpeg';
+    }
+    console.log('Using SVG icon:', `assets/icons/${activeIcon}1.svg`);
+    return `assets/icons/${activeIcon}1.svg`;
+  }
+
   onItemClick(item: SidebarItem): void {
     this.sidebarItems = this.sidebarItems.map(i => ({ ...i, active: i.id === item.id }));
   }
