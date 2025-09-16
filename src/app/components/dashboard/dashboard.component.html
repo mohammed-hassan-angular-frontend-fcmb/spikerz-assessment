@@ -223,20 +223,15 @@
 
                       <!-- Node Labels positioned below centered nodes -->
                       <text x="80" y="200" text-anchor="middle" fill="#6b7280" font-family="Inter, sans-serif" font-size="15" font-weight="600">Loremipsumm</text>
-                      <!-- <text x="250" y="190" text-anchor="middle" fill="#6b7280" font-family="Inter, sans-serif" font-size="14" font-weight="500">Loremipsu</text> -->
                       <text x="240" y="200" text-anchor="middle" fill="#6b7280" font-family="Inter, sans-serif" font-size="15" font-weight="600">Loremipsu</text>
                       <text x="400" y="200" text-anchor="middle" fill="#6b7280" font-family="Inter, sans-serif" font-size="15" font-weight="600">Loremipsu</text>
 
                       <!-- Node 4 Label and IP - positioned to match uploaded image -->
-                      <!-- <text x="780" y="85" text-anchor="middle" fill="#6b7280" font-family="Inter, sans-serif" font-size="15" font-weight="600">Loremipsumdolorsit</text> -->
                       <text x="780" y="110" text-anchor="middle" fill="#6b7280" font-family="Inter, sans-serif" font-size="15" font-weight="600">Loremipsumdolorsit</text>
-                      <!-- <text x="780" y="98" text-anchor="middle" fill="#9ca3af" font-family="Inter, sans-serif" font-size="9">192.168.1.1</text> -->
                       <text x="780" y="127" text-anchor="middle" fill="#9ca3af" font-family="Inter, sans-serif" font-size="12">192.168.1.1</text>
 
                       <!-- Node 5 Label and IP - positioned to match uploaded image -->
-                      <!-- <text x="780" y="235" text-anchor="middle" fill="#6b7280" font-family="Inter, sans-serif" font-size="15" font-weight="600">Loremipsumdolorsit002</text> -->
                       <text x="780" y="257" text-anchor="middle" fill="#6b7280" font-family="Inter, sans-serif" font-size="15" font-weight="600">Loremipsumdolorsit002</text>
-                      <!-- <text x="780" y="248" text-anchor="middle" fill="#9ca3af" font-family="Inter, sans-serif" font-size="9">192.168.1.2</text> -->
                       <text x="780" y="273" text-anchor="middle" fill="#9ca3af" font-family="Inter, sans-serif" font-size="12">192.168.1.2</text>
 
                       <!-- Hover areas for tooltips - updated for centered nodes -->
@@ -426,18 +421,33 @@
 
                 </div>
 
-                <!-- Legend -->
+                <!-- Legend with Shield SVG Icons -->
                 <div class="legend">
                   <div class="legend-item">
-                    <div class="legend-icon error"></div>
+                    <div class="legend-icon-svg">
+                      <svg width="20" height="21" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 12.84C0 5.93641 5.59644 0.339966 12.5 0.339966C19.4036 0.339966 25 5.93641 25 12.84C25 19.7435 19.4036 25.34 12.5 25.34C5.59644 25.34 0 19.7435 0 12.84Z" fill="#E6372B"/>
+                        <path d="M14.2358 10.8225L10.7635 14.5841M10.7635 10.8225L14.2358 14.5841M18.0552 13.4556C18.0552 17.2172 15.6246 19.098 12.7358 20.1888C12.5845 20.2444 12.4202 20.2417 12.2705 20.1813C9.37465 19.098 6.94409 17.2172 6.94409 13.4556V8.18941C6.94409 7.98988 7.01726 7.79853 7.14749 7.65744C7.27772 7.51635 7.45436 7.43709 7.63854 7.43709C9.02742 7.43709 10.7635 6.53431 11.9719 5.3908C12.119 5.25463 12.3061 5.17981 12.4996 5.17981C12.6932 5.17981 12.8803 5.25463 13.0274 5.3908C14.2427 6.54184 15.9719 7.43709 17.3608 7.43709C17.5449 7.43709 17.7216 7.51635 17.8518 7.65744C17.982 7.79853 18.0552 7.98988 18.0552 8.18941V13.4556Z" stroke="#FFF8F7" stroke-width="1.46" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
                     <span class="legend-text error">Lorem</span>
                   </div>
                   <div class="legend-item">
-                    <div class="legend-icon warning"></div>
+                    <div class="legend-icon-svg">
+                      <svg width="20" height="21" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 12.84C0 5.93641 5.59644 0.339966 12.5 0.339966C19.4036 0.339966 25 5.93641 25 12.84C25 19.7435 19.4036 25.34 12.5 25.34C5.59644 25.34 0 19.7435 0 12.84Z" fill="#FF9500"/>
+                        <path d="M14.2358 10.8225L10.7635 14.5841M10.7635 10.8225L14.2358 14.5841M18.0552 13.4556C18.0552 17.2172 15.6246 19.098 12.7358 20.1888C12.5845 20.2444 12.4202 20.2417 12.2705 20.1813C9.37465 19.098 6.94409 17.2172 6.94409 13.4556V8.18941C6.94409 7.98988 7.01726 7.79853 7.14749 7.65744C7.27772 7.51635 7.45436 7.43709 7.63854 7.43709C9.02742 7.43709 10.7635 6.53431 11.9719 5.3908C12.119 5.25463 12.3061 5.17981 12.4996 5.17981C12.6932 5.17981 12.8803 5.25463 13.0274 5.3908C14.2427 6.54184 15.9719 7.43709 17.3608 7.43709C17.5449 7.43709 17.7216 7.51635 17.8518 7.65744C17.982 7.79853 18.0552 7.98988 18.0552 8.18941V13.4556Z" stroke="#FFF8F7" stroke-width="1.46" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
                     <span class="legend-text warning">Lorem</span>
                   </div>
                   <div class="legend-item">
-                    <div class="legend-icon success"></div>
+                    <div class="legend-icon-svg">
+                      <svg width="20" height="21" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 12.84C0 5.93641 5.59644 0.339966 12.5 0.339966C19.4036 0.339966 25 5.93641 25 12.84C25 19.7435 19.4036 25.34 12.5 25.34C5.59644 25.34 0 19.7435 0 12.84Z" fill="#02983E"/>
+                        <path d="M14.2766 11.4334L12.2597 14.4683L10.897 13.5711M18.3337 13.5711C18.3337 17.2169 15.7816 19.0398 12.7482 20.0971C12.5894 20.151 12.4169 20.1484 12.2597 20.0898C9.21908 19.0398 6.66699 17.2169 6.66699 13.5711V8.46692C6.66699 8.27353 6.74382 8.08807 6.88056 7.95132C7.01731 7.81458 7.20277 7.73775 7.39616 7.73775C8.85449 7.73775 10.6774 6.86275 11.9462 5.75442C12.1006 5.62244 12.2971 5.54993 12.5003 5.54993C12.7035 5.54993 12.9 5.62244 13.0545 5.75442C14.3305 6.87005 16.1462 7.73775 17.6045 7.73775C17.7979 7.73775 17.9833 7.81458 18.1201 7.95132C18.2568 8.08807 18.3337 8.27353 18.3337 8.46692V13.5711Z" stroke="#FFF8F7" stroke-width="1.46434" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
                     <span class="legend-text success">Lorem</span>
                   </div>
                 </div>
@@ -458,7 +468,12 @@
                 </div>
                 <div class="list-body">
                   <div class="asset-row">
-                    <div class="row-icon"></div>
+                    <div class="row-icon">
+                      <svg width="45" height="45" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="19.8448" cy="19.8448" r="19.845" fill="#D7EAFF"/>
+                        <path d="M15.2036 15.1255H15.2118M15.2036 24.9693H15.2118M13.563 11.8443H26.688C27.5941 11.8443 28.3286 12.5788 28.3286 13.4849V16.7661C28.3286 17.6722 27.5941 18.4068 26.688 18.4068H13.563C12.6569 18.4068 11.9224 17.6722 11.9224 16.7661V13.4849C11.9224 12.5788 12.6569 11.8443 13.563 11.8443ZM13.563 21.688H26.688C27.5941 21.688 28.3286 22.4225 28.3286 23.3286V26.6099C28.3286 27.516 27.5941 28.2505 26.688 28.2505H13.563C12.6569 28.2505 11.9224 27.516 11.9224 26.6099V23.3286C11.9224 22.4225 12.6569 21.688 13.563 21.688Z" stroke="#1873DE" stroke-width="1.64062" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
                     <div class="asset-meta">
                       <div class="asset-name">Loremipsumdolorsit</div>
                       <div class="asset-ip">192.168.1.1</div>
@@ -466,7 +481,12 @@
                     <span class="badge critical">Critical</span>
                   </div>
                   <div class="asset-row">
-                    <div class="row-icon"></div>
+                    <div class="row-icon">
+                      <svg width="45" height="45" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="19.8448" cy="19.8448" r="19.845" fill="#D7EAFF"/>
+                        <path d="M15.2036 15.1255H15.2118M15.2036 24.9693H15.2118M13.563 11.8443H26.688C27.5941 11.8443 28.3286 12.5788 28.3286 13.4849V16.7661C28.3286 17.6722 27.5941 18.4068 26.688 18.4068H13.563C12.6569 18.4068 11.9224 17.6722 11.9224 16.7661V13.4849C11.9224 12.5788 12.6569 11.8443 13.563 11.8443ZM13.563 21.688H26.688C27.5941 21.688 28.3286 22.4225 28.3286 23.3286V26.6099C28.3286 27.516 27.5941 28.2505 26.688 28.2505H13.563C12.6569 28.2505 11.9224 27.516 11.9224 26.6099V23.3286C11.9224 22.4225 12.6569 21.688 13.563 21.688Z" stroke="#1873DE" stroke-width="1.64062" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
                     <div class="asset-meta">
                       <div class="asset-name">Loremipsumdolorsit002</div>
                       <div class="asset-ip">192.168.1.2</div>
