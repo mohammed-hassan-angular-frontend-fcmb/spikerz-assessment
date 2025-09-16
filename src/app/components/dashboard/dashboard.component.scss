@@ -66,7 +66,8 @@
 
       /* New layout */
       .left-column {
-        flex: 1;
+        width: 385px;
+        flex: none;
         overflow-y: auto;
         max-height: 100%;
 
@@ -93,13 +94,15 @@
 
             .section-title {
               /* Closer to mock: strong, compact title */
-              font-size: 16px;
+              font-size: 20px;
               font-weight: 700;
               line-height: 1.25;
               color: #0F172A; /* slate-900 */
+              margin-bottom: 10px;
+              margin-top: 10px;
 
               &.text-green {
-                color: #16A34A; /* green-600 */
+                color: #02983E; /* green-600 */
               }
             }
 
@@ -111,15 +114,17 @@
             }
           }
 
+          // .divider { @apply h-px bg-gray-100 my-4; }
           .divider { @apply h-px bg-gray-100 my-4; }
 
           .kv-list {
-            @apply mt-2 border border-gray-100 rounded-xl divide-y divide-gray-100 bg-white;
+            // @apply mt-2 border border-gray-100 rounded-xl divide-y divide-gray-100 bg-white;
+            @apply mt-2 border-gray-100 rounded-xl divide-gray-100 bg-white;
 
             .kv-item { @apply flex justify-between items-center px-4 py-3; }
-            .kv-item.full { @apply block px-4 py-3; }
-            .kv-key { font-size: 13px; font-weight: 600; color: #374151; }
-            .kv-val { font-size: 13px; color: #111827; }
+            .kv-item.full { @apply block px-4 py-1; }
+            .kv-key { font-size: 15px; font-weight: 700; color: #374151; }
+            .kv-val { font-size: 15px; color: #111827; }
           }
 
           /* Server Cards Section */
@@ -133,12 +138,12 @@
                 @apply mb-3;
 
                 .server-title {
-                  @apply text-sm font-semibold text-gray-900 m-0;
+                  @apply text-lg font-semibold text-gray-900 m-0;
                 }
               }
 
               .server-card-wrapper {
-                @apply border border-gray-300 rounded-lg p-3;
+                @apply border border-gray-300 rounded-lg p-3 bg-slate-50;
 
                 .server-card-content {
                   @apply flex items-center;
@@ -194,11 +199,12 @@
       }
 
       .right-column {
-        flex: 2;
+        // width: 787px;
+        width: 750px;
+        flex: none;
         position: sticky;
         top: 0;
         height: fit-content;
-        // max-height: calc(100vh - 120px);
         overflow-y: auto;
         display: flex;
         flex-direction: column;
@@ -1172,12 +1178,14 @@
         height: auto;
 
         .left-column {
+          width: 385px;
           flex: none;
           overflow-y: visible;
           max-height: none;
         }
 
         .right-column {
+          width: 787px;
           position: static;
           flex: none;
           max-height: none;
@@ -1220,12 +1228,14 @@
         height: auto;
 
         .left-column {
+          width: 385px;
           flex: none;
           overflow-y: visible;
           max-height: none;
         }
 
         .right-column {
+          width: 787px;
           position: static;
           flex: none;
           max-height: none;
