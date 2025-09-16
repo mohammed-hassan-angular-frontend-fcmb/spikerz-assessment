@@ -156,6 +156,8 @@
             <div class="card graph-card">
               <div class="diagram-container">
                 <div class="nodes-container">
+                  <!-- Unified Network Container - moves all nodes and connections together -->
+                  <div class="network-diagram-container" [class.sidebar-collapsed]="sidebarCollapsed()">
                   <!-- Node 1 -->
                   <div class="node node-1" (mouseenter)="showNodeTooltip = true" (mouseleave)="showNodeTooltip = false">
                     <div class="node-icon-svg">
@@ -422,6 +424,7 @@
                   <div class="arrow arrow-right arrow-2-3"></div>
                   <div class="arrow arrow-right arrow-to-4"></div>
                   <div class="arrow arrow-right arrow-to-5"></div>
+                  </div> <!-- End of network-diagram-container -->
                 </div>
 
                 <!-- Legend -->

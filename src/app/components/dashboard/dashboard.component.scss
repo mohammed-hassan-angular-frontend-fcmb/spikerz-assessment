@@ -314,6 +314,19 @@
           .diagram-container { position:relative; width:100%; max-width:1100px; margin:0 auto; background:#ffffff; padding:10px 20px; border-radius:16px; box-shadow:0 10px 25px -5px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); min-height:400px; }
           .diagram-title { font-size:28px; font-weight:700; color:#10b981; margin-bottom:60px; letter-spacing:-0.025em; }
           .nodes-container { position:relative; height:350px; width:100%; }
+
+          /* Unified network diagram container - groups all nodes and connections */
+          .network-diagram-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease-in-out;
+          }
+
+          /* Move entire network diagram when sidebar is collapsed */
+          .network-diagram-container.sidebar-collapsed {
+            transform: translateX(-168px); /* Move entire diagram left by sidebar width difference */
+          }
           .node { position:absolute; display:flex; flex-direction:column; align-items:center; gap:12px; z-index:10; }
           .node-icon { position:relative; width:70px; height:70px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:#dbeafe; border:3px solid #3b82f6; box-shadow:0 4px 12px rgba(59,130,246,0.15); transition:all .2s ease; color:#3b82f6; }
           .node-icon:hover { transform: translateY(-2px); box-shadow:0 8px 20px rgba(59,130,246,0.25); }
@@ -339,6 +352,8 @@
           .node-4 { top:20px; right:40px; }   /* Loremipsumdolorsit (top-right) - aligns with Y upper branch */
           .node-5 { top:160px; right:40px; }  /* Loremipsumdolorsit002 (bottom-right) - aligns with Y lower branch */
 
+
+
           /* Connection lines */
           .connection { position:absolute; background:#cbd5e1; z-index:1; }
           .connection-horizontal { height:1px; border-radius:2px; }
@@ -359,6 +374,8 @@
             z-index: 1;
             transform: rotate(90deg);
           }
+
+
 
           /* Y-stem (main horizontal line from node 3) */
           .y-stem {
@@ -415,6 +432,8 @@
           .arrow-2-3 { top:109px; left:330px; }   /* Arrow between Loremipsu → Loremipsu */
           .arrow-to-4 { top:49px; right:130px; }   /* Arrow to top-right node */
           .arrow-to-5 { top:189px; right:130px; }  /* Arrow to bottom-right node */
+
+
 
           /* Legend */
           .legend {
