@@ -354,12 +354,12 @@
           .node-ip { font-size:11px; color:#94a3b8; font-weight:500; text-align:center; margin-top: -15px; }
 
           /* Node positioning - updated to match SVG coordinates */
-          .node-1 { top:100px; left:50px; }    /* Loremipsumm (leftmost) - matches SVG cx="80" */
-          .node-2 { top:100px; left:220px; }   /* Loremipsu (center-left) - matches SVG cx="250" */
-          .node-3 { top:100px; left:380px; }   /* Loremipsu (center-right) - matches SVG cx="410" */
+          .node-1 { top:125px; left:80px; }    /* Loremipsumm (leftmost) - matches SVG cx="80" cy="125" exactly */
+          .node-2 { top:125px; left:250px; }   /* Loremipsu (center-left) - matches SVG cx="250" cy="125" exactly */
+          .node-3 { top:125px; left:410px; }   /* Loremipsu (center-right) - matches SVG cx="410" cy="125" exactly */
 
-          .node-4 { top:25px; right:40px; }    /* Loremipsumdolorsit (top-right) - matches SVG cy="50" */
-          .node-5 { top:175px; right:40px; }   /* Loremipsumdolorsit002 (bottom-right) - matches SVG cy="200" */
+          .node-4 { top:50px; right:40px; }    /* Loremipsumdolorsit (top-right) - matches SVG cy="50" exactly */
+          .node-5 { top:200px; right:40px; }   /* Loremipsumdolorsit002 (bottom-right) - matches SVG cy="200" exactly */
 
 
 
@@ -395,13 +395,14 @@
           .tooltip-backdrop {
             position: fixed;
             top: 33%;
-            left: 50%;
+            left: 45%;
             right: auto;
             bottom: auto;
             background: rgba(0, 0, 0, 0.1);
             z-index: 10000;
             display: block;
             border-radius: 16px;
+            pointer-events: none; /* Prevent tooltip from interfering with hover detection */
           }
 
           /* Specific positioning for Node 2 tooltip */
@@ -747,7 +748,7 @@
           }
 
         .node-5 .tooltip-backdrop {
-            top: 30%;
+            top: 35%;
             left: 80%;
             transform: translateX(-50%);
           }
@@ -757,7 +758,6 @@
           width: 100% !important;
           min-width: 250px !important;
           position: relative;
-          // left: 15% !important;
 
           .shield-icon-header {
             display: flex;
